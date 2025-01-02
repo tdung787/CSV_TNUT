@@ -862,7 +862,7 @@
     @include('layout.footer')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-    <script src="{{ asset('{{ asset('js/scripts_old.js') }}') }}"></script>
+    <script src="{{ asset('js/scripts_old.js') }}"></script>
     
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
          crossorigin="anonymous">
@@ -870,7 +870,7 @@
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="{{ asset('slick/slick.js') }}"></script>
-    <script src="{{ asset('{{ asset('js/scripts.js') }}') }}"></script>
+    <script src="{{ asset('js/scripts.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
          crossorigin="anonymous">
     </script>
