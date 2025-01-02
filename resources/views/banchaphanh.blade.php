@@ -374,7 +374,7 @@
                             <div class="mb-3">
                                 <div class="vitage-img">
                                     <a href="#">
-                                        <img class="bch" src="img/banchaphanh/exodia/right-leg.webp" alt="..." />
+                                        <img class="bch" src="https://vanvn.vn/wp-content/uploads/2023/07/Ngo-Nhu-Khoa-vanvn.jpg" alt="..." />
                                     </a>
                                 </div>
                             </div>

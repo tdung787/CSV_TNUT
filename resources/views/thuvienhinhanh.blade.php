@@ -327,18 +327,18 @@
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="inner">
-                        <div><a href=" {{ route('kiemdinh') }} "
+                        <div><a href="# "
                                 title="Giấy chứng nhận kiểm định chất lượng cơ sở giáo dục và chương trình đào tạo"><img
                                     src="https://www.tnut.edu.vn/uploads/art/imgs/thumb/art_832_556_11812.jpg" width="100%" class="rounded"
                                     alt="Giấy chứng nhận kiểm định chất lượng cơ sở giáo dục và chương trình đào tạo"></a>
                         </div>
                         <div class="text rounded-bottom mt-3">
-                            <h2><a href=" {{ route('kiemdinh') }}"
+                            <h2><a href="#"
                                     title="Giấy chứng nhận kiểm định chất lượng cơ sở giáo dục và chương trình đào tạo">Giấy
                                     chứng nhận kiểm định chất lượng cơ sở giáo dục và chương trình đào tạo</a></h2>
                             <div class="small text-secondary">10/04/2023</div>
                             <div></div>
-                            <div><a href=" {{ route('kiemdinh') }}" class="btn btn-sm text-danger btn-readmore">Chi
+                            <div><a href="#" class="btn btn-sm text-danger btn-readmore">Chi
                                     tiết</a></div>
                         </div>
                     </div>
