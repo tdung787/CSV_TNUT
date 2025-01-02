@@ -6,15 +6,15 @@
             </a>
         </li>
         <li class="list-group-item bg-light rounded">
-            <a href="{{route('tinhnguoicodien')}}" class="fw-bold text-dark nomals1">Chia sẻ
+            <a href="{{route('tinhnguoicodien')}}" class="fw-bold text-dark nomals1">Tình người cơ điện
             </a>
         </li>
         <li class="list-group-item bg-light rounded">
-            <a href="{{route('hoicodiencactinh')}}" class="fw-bold text-dark nomals1">Kết nối
+            <a href="{{route('hoicodiencactinh')}}" class="fw-bold text-dark nomals1">Hội cơ điện các tỉnh
             </a>
         </li>
         <li class="list-group-item bg-light rounded">
-            <a href="{{route('tieubieu')}}" class="fw-bold text-dark nomals1">Thành công
+            <a href="{{route('tieubieu')}}" class="fw-bold text-dark nomals1">Gương mặt cựu sinh viên tiêu biểu
             </a>
         </li>
         {{-- <li class="list-group-item bg-light rounded">

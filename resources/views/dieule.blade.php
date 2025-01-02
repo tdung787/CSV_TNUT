@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
 </head>
@@ -318,9 +318,7 @@
 
 
 
-    .list-group-flush>.list-group-item {
-        background: url(/img/bullet.svg) no-repeat 0 1rem;
-    }
+
 
     .list-group-flush>.list-group-item {
         border: none;
@@ -1674,7 +1672,7 @@
     }
 
     .list-vitage .list-group-flush>.list-group-item {
-        background: url(/img/bullet.svg) no-repeat 0 0.6rem;
+        background: url() no-repeat 0 0.6rem;
     }
 
     .council-tl {
@@ -2295,14 +2293,14 @@
     </div>
     <!--footer-->
     @include('layout.footer')
-    <script src="js/scripts_old.js"></script>
-    <script type="text/javascript" src="./slick/slick.js"></script>
-    <script type="text/javascript" src="js/scripts.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    <script src="{{ asset('js/scripts_old.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('slick/slick.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+
 </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+
 </script>
 
 </html>

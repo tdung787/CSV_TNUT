@@ -248,7 +248,7 @@
   border: none;
 }
 #tabNewsContent .list-group-flush > .list-group-item {
-  background: url(/img/bullet.svg) no-repeat 0 1rem;
+  background: url() no-repeat 0 1rem;
 }
 #tabNewsContent ul {
     /*cuong-edit*/
