@@ -1,0 +1,38 @@
+.dropdown-menu {
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: transform 0.5s;
+}
+.dropdown:hover > .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(-2px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+.dropdown > .dropdown-toggle:active {
+    pointer-events: none;
+}
+.dropdown-item {
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+    font-size: 0.9rem;
+}
+#imagetnutheader {
+    width: 400px;
+}
+.navbar {
+    --bs-navbar-padding-y: 0;
+    --bs-navbar-brand-padding-y: 0;
+    --bs-navbar-brand-margin-end: 0;
+    height: 100px;
+}
+
+.dropdown-menu {
+    --bs-dropdown-item-padding-x: 1rem;
+    --bs-dropdown-item-padding-y: 0.2rem;
+}
+main {
+    min-height: 90vh;
+}
