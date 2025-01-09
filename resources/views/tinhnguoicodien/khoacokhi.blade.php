@@ -8,7 +8,7 @@
     />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>02 SINH VIÊN TNUT ĐẠT GIẢI BA OLYMPIC TOÁN HỌC TOÀN QUỐC MÔN GIẢI TÍCH NĂM 2024</title>
+    <title>KHOA CƠ KHÍ TIẾP NHẬN THIẾT BỊ HIỆN ĐẠI TRỊ GIÁ 2,5 TỶ ĐỒNG</title>
     <!-- Favicon-->
     <link rel="icon" href="/icon/Logo Khoa FEE_2020 (xanh sam)_Vi.png" />
     <!-- Bootstrap Icons-->

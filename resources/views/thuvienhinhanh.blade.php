@@ -327,37 +327,37 @@
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="inner">
-                        <div><a href=" {{ route('kiemdinh') }} "
+                        <div><a href="https://tnut.edu.vn/giay-chung-nhan-kiem-dinh-chat-luong-co-so-giao-duc-va-chuong-trinh-dao-tao-dz11812.html"
                                 title="Giấy chứng nhận kiểm định chất lượng cơ sở giáo dục và chương trình đào tạo"><img
                                     src="https://www.tnut.edu.vn/uploads/art/imgs/thumb/art_832_556_11812.jpg" width="100%" class="rounded"
                                     alt="Giấy chứng nhận kiểm định chất lượng cơ sở giáo dục và chương trình đào tạo"></a>
                         </div>
                         <div class="text rounded-bottom mt-3">
-                            <h2><a href=" {{ route('kiemdinh') }}"
+                            <h2><a href="https://tnut.edu.vn/giay-chung-nhan-kiem-dinh-chat-luong-co-so-giao-duc-va-chuong-trinh-dao-tao-dz11812.html"
                                     title="Giấy chứng nhận kiểm định chất lượng cơ sở giáo dục và chương trình đào tạo">Giấy
                                     chứng nhận kiểm định chất lượng cơ sở giáo dục và chương trình đào tạo</a></h2>
                             <div class="small text-secondary">10/04/2023</div>
                             <div></div>
-                            <div><a href=" {{ route('kiemdinh') }}" class="btn btn-sm text-danger btn-readmore">Chi
+                            <div><a href="https://tnut.edu.vn/giay-chung-nhan-kiem-dinh-chat-luong-co-so-giao-duc-va-chuong-trinh-dao-tao-dz11812.html" class="btn btn-sm text-danger btn-readmore">Chi
                                     tiết</a></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="inner">
-                        <div><a href="/khao-sat-so-bo-danh-gia-chat-luong-chuong-trinh-dao-tao-chinh-quy-trinh-do-dai-hoc-dz9575.html"
+                        <div><a href="https://tnut.edu.vn/khao-sat-so-bo-danh-gia-chat-luong-chuong-trinh-dao-tao-chinh-quy-trinh-do-dai-hoc-dz9575.html"
                                 title="Khảo sát sơ bộ đánh giá chất lượng chương trình đào tạo chính quy trình độ đại học"><img
                                     src="https://www.tnut.edu.vn/uploads/art/imgs/thumb/art_832_556_9575.jpg" width="100%" class="rounded"
                                     alt="Khảo sát sơ bộ đánh giá chất lượng chương trình đào tạo chính quy trình độ đại học"></a>
                         </div>
                         <div class="text rounded-bottom mt-3">
-                            <h2><a href="/khao-sat-so-bo-danh-gia-chat-luong-chuong-trinh-dao-tao-chinh-quy-trinh-do-dai-hoc-dz9575.html"
+                            <h2><a href="https://tnut.edu.vn/khao-sat-so-bo-danh-gia-chat-luong-chuong-trinh-dao-tao-chinh-quy-trinh-do-dai-hoc-dz9575.html"
                                     title="Khảo sát sơ bộ đánh giá chất lượng chương trình đào tạo chính quy trình độ đại học">Khảo
                                     sát sơ bộ đánh giá chất lượng chương trình đào tạo chính quy trình độ đại học</a>
                             </h2>
                             <div class="small text-secondary">08/12/2022</div>
                             <div></div>
-                            <div><a href="/khao-sat-so-bo-danh-gia-chat-luong-chuong-trinh-dao-tao-chinh-quy-trinh-do-dai-hoc-dz9575.html"
+                            <div><a href="https://tnut.edu.vn/khao-sat-so-bo-danh-gia-chat-luong-chuong-trinh-dao-tao-chinh-quy-trinh-do-dai-hoc-dz9575.html"
                                     class="btn btn-sm text-danger btn-readmore">Chi tiết</a></div>
                         </div>
                     </div>
@@ -443,7 +443,7 @@
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="./slick/slick.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
-    <script type="text/javascript" src="js/prism.js"></script>
+    {{-- <script type="text/javascript" src="js/prism.js"></script> --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
 </script>

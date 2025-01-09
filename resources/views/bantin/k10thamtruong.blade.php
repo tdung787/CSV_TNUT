@@ -8,7 +8,7 @@
     />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>02 SINH VIÊN TNUT ĐẠT GIẢI BA OLYMPIC TOÁN HỌC TOÀN QUỐC MÔN GIẢI TÍCH NĂM 2024</title>
+    <title>LỚP MÁY B, MÁY C - K10 VỀ THĂM TRƯỜNG</title>
     <!-- Favicon-->
     <link rel="icon" href="/icon/Logo Khoa FEE_2020 (xanh sam)_Vi.png" />
     <!-- Bootstrap Icons-->

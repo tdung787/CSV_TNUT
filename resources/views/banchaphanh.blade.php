@@ -21,7 +21,7 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style_old.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/slick_style.css') }}" />
-    <link rel="stylesheet" href="{{asset('css/dropdown.css')}}" />
+    <link rel="stylesheet" href="{{ asset('css/dropdown.css') }}" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
@@ -30,9 +30,11 @@
         body {
             overflow-x: hidden;
         }
+
         .fw-bold:hover {
-    text-decoration: underline;
-}
+            text-decoration: underline;
+        }
+
         #about h2,
         #about p {
             font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial,
@@ -52,7 +54,8 @@
             font-weight: 700;
             background-color: #bb2d3b;
         }
-/*
+
+        /*
         #page-top {
             font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.3;
@@ -227,9 +230,10 @@
         .nomals1 {
             font-weight: 400 !important;
         }
+
         .list-group-flush>.list-group-item {
-        background: url(/img/bullet.svg) no-repeat 0 1rem;
-    }
+            background: url(/img/bullet.svg) no-repeat 0 1rem;
+        }
 
         .list-group-flush {
             border-radius: 0;
@@ -284,6 +288,7 @@
         #bgrflex {
             background-color: rgba(247, 247, 247, 0.982);
         }
+
         /* img{
             width: 150px;
         } */
@@ -291,9 +296,9 @@
         /* .carousel-inner {
           padding-top: 50px;
         } */
-         .bch{
+        .bch {
             width: 150px;
-         }
+        }
     </style>
 </head>
 
@@ -307,10 +312,15 @@
                 <div id="bgrflex" class="col-lg-8">
                     <div class="row g-3 row g-3 justify-content-center mb-5">
                         <div class="col-lg-3 col-md-4 col-sm-6 text-center fw-600 text-danger">
-                            <div class="mb-3">
+                            <div class="mb-3 row">
+                                <p style="text-align: center; font-weight: bold; ">
+                                    LÃNH ĐẠO
+                                    NHÀ TRƯỜNG
+                                </p>
                                 <div class="vitage-img">
                                     <a href="#">
-                                        <img class="bch" src="https://www.tnut.edu.vn/uploads/lec/imgs/7_ahai.png" alt="..." />
+                                        <img class="bch" src="https://www.tnut.edu.vn/uploads/lec/imgs/7_ahai.png"
+                                            alt="..." />
                                     </a>
                                 </div>
                             </div>
@@ -322,12 +332,18 @@
                                 <em><small>dotrunghai@tnut.edu.vn</small></em>
                             </div>
                         </div>
-                        <div class="w-100"></div>
+                        <div class="w-100 text-center fw-600 text-danger">
+                            <p style="text-align: center; font-weight: bold; ">
+                                BAN GIÁM HIỆU NHÀ TRƯỜNG
+                            </p>
+                        </div>
                         <div class="col-lg-3 col-md-4 col-sm-6 text-center fw-600 text-danger">
                             <div class="mb-3">
                                 <div class="vitage-img">
                                     <a href="#">
-                                        <img class="bch" src="https://www.tnut.edu.vn/uploads/lec/imgs/4_atuanhctc.png" alt="..." />
+                                        <img class="bch"
+                                            src="https://www.tnut.edu.vn/uploads/lec/imgs/4_atuanhctc.png"
+                                            alt="..." />
                                     </a>
                                 </div>
                             </div>
@@ -343,7 +359,9 @@
                             <div class="mb-3">
                                 <div class="vitage-img">
                                     <a href="#">
-                                        <img class="bch" src="https://www.tnut.edu.vn/uploads/lec/imgs/3_image003.png" alt="..." />
+                                        <img class="bch"
+                                            src="https://www.tnut.edu.vn/uploads/lec/imgs/3_image003.png"
+                                            alt="..." />
                                     </a>
                                 </div>
                             </div>
@@ -359,7 +377,8 @@
                             <div class="mb-3">
                                 <div class="vitage-img">
                                     <a href="#">
-                                        <img class="bch" src="https://www.tnut.edu.vn/uploads/lec/imgs/1_atuan.jpg" alt="..." />
+                                        <img class="bch" src="https://www.tnut.edu.vn/uploads/lec/imgs/1_atuan.jpg"
+                                            alt="..." />
                                     </a>
                                 </div>
                             </div>
@@ -376,7 +395,8 @@
                             <div class="mb-3">
                                 <div class="vitage-img">
                                     <a href="#">
-                                        <img class="bch" src="img/banchaphanh/exodia/right-leg.webp" alt="..." />
+                                        <img class="bch" src="img/banchaphanh/exodia/right-leg.webp"
+                                            alt="..." />
                                     </a>
                                 </div>
                             </div>
@@ -392,7 +412,8 @@
                             <div class="mb-3">
                                 <div class="vitage-img">
                                     <a href="#">
-                                        <img class="bch" src="https://www.tnut.edu.vn/uploads/lp/im1s/59_TA.png" alt="..." />
+                                        <img class="bch" src="https://www.tnut.edu.vn/uploads/lp/im1s/59_TA.png"
+                                            alt="..." />
                                     </a>
                                 </div>
                             </div>
@@ -426,11 +447,11 @@
     <script type="text/javascript" src="js/scripts.js"></script>
     <script type="text/javascript" src="js/prism.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-</script>
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

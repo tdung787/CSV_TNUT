@@ -18,10 +18,10 @@ class CsvController extends Controller
     {
         return view('sumenh');
     }
-    public function kiemdinh()
-    {
-        return view('multimedia.giaychungnhankiemdinh');
-    }
+    // public function kiemdinh()
+    // {
+    //     return view('multimedia.giaychungnhankiemdinh');
+    // }
     public function quytuhao()
     {
         return view('quytuhao');
@@ -148,7 +148,7 @@ class CsvController extends Controller
 
     public function upload(Request $request)
     {
-       if ($request->hasFile('upload')) {
+        if ($request->hasFile('upload')) {
             $originName = $request->file('upload')->getClientOriginalName();
             $fileName = pathinfo($originName, PATHINFO_FILENAME);
             $extension = $request->file('upload')->getClientOriginalExtension();
@@ -157,26 +157,26 @@ class CsvController extends Controller
             $request->file('upload')->move(public_path('media'), $fileName);
 
             $url = asset('media/' . $fileName);
-            return response()->json(['fileName' => $fileName, 'uploaded'=> 1, 'url' => $url]);
+            return response()->json(['fileName' => $fileName, 'uploaded' => 1, 'url' => $url]);
         }
     }
     public function create(Request $request)
     {
         $post = new Post();
 
-         $post->category=$request->category;
+        $post->category = $request->category;
 
-         $post->thumbnail=$request->thumbnail;
+        $post->thumbnail = $request->thumbnail;
 
-         $post->tittle=$request->tittle;
+        $post->tittle = $request->tittle;
 
-         $post->description=$request->description;
+        $post->description = $request->description;
 
-         $post->content=$request->content;
+        $post->content = $request->content;
 
-         $post->save();
+        $post->save();
 
-         return redirect()->back();
+        return redirect()->back();
     }
     public function list()
     {
