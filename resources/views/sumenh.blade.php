@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Đồ án viễn thông 2 | Sứ mệnh - Tầm nhìn</title>
+    <title>CSV TNUT | Sứ mệnh - Tầm nhìn</title>
     <link rel="icon" href="{{ asset('/icon/favicon.png') }}" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style_old.css') }}" />

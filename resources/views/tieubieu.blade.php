@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Đồ án Viễn Thông 2 | Gương mặt tiêu biểu</title>
+    <title>CSV TNUT | Gương mặt tiêu biểu</title>
     <!-- Favicon-->
     <!-- Bootstrap Icons-->
     <link rel="icon" href="{{asset('/icon/favicon.png')}}" />

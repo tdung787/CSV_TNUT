@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Đồ án Viễn Thông 2 | Ban chấp hành TNUT</title>
+    <title>CSV TNUT | Ban chấp hành TNUT</title>
     <!-- Favicon-->
     <link rel="icon" href="/icon/Logo Khoa FEE_2020 (xanh sam)_Vi.png" />
     <!-- Bootstrap Icons-->

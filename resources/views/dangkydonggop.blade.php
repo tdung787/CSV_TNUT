@@ -8,7 +8,7 @@
     />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Đồ án Viễn Thông 2 || Đăng ký đóng góp</title>
+    <title>CSV TNUT || Đăng ký đóng góp</title>
     <!-- Favicon-->
     <!-- Bootstrap Icons-->
     <link

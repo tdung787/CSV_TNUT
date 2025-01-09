@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Đồ án Viễn Thông 2 | Hội cơ điện các tỉnh</title>
+    <title>CSV TNUT | Hội cơ điện các tỉnh</title>
     <link rel="icon" href="{{ asset('/icon/favicon.png') }}" />
     <!-- Favicon-->
     <!-- Bootstrap Icons-->

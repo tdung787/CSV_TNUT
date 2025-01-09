@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Đồ án viễn thông 2 | Danh sách cựu sinh viên</title>
+    <title>CSV TNUT | Danh sách cựu sinh viên</title>
     <link rel="icon" href="{{ asset('/icon/favicon.png') }}" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('css/style_old.css') }}" />

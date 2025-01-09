@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Đồ án viễn thông 2 | Điều lệ hoạt động</title>
+    <title>CSV TNUT | Điều lệ hoạt động</title>
     <link rel="icon" href="icon/favicon.png" />
     <!-- Bootstrap Icons-->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />

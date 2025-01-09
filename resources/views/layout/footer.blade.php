@@ -88,8 +88,20 @@
                         </div>
                     </li>
                     <li>
-                        <div class="col-6">
-                            <img src="{{ asset('img/Picture1.png') }}" alt="" />
+                        <div class="col-lg-8 col-md-8 col-sm-12">
+                            <div class="p-3 rounded shadow border d-flex h-100  align-items-center">
+                                <div class="me-3 "><img src="{{asset('img/TA.png')}}" width="56px" class="rounded-circle"></div>
+                                <div class="fw-bold">
+                                    <div>TS. Trương Tuấn Anh</div>
+                                    <div>
+                                        <a href="tel:0973143888" style="text-decoration: none;">
+                                            <i class="fas fa-phone-alt me-3"></i>
+                                            <span class="fw-bold">0973143888</span>
+                                        </a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
                         </div>
                     </li>
                 </ul>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Đồ án Viễn Thông 2 | Hợp tác</title>
+    <title>CSV TNUT | Hợp tác</title>
     <link rel="icon" href="{{ asset('/icon/favicon.png') }}" />
     <!-- Favicon-->
     <!-- Bootstrap Icons-->
@@ -349,9 +349,7 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"  crossorigin="anonymous"></script>
 
-</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"  crossorigin="anonymous"></script>
 
-</script>
 </body>
 </html>

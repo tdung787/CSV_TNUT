@@ -8,7 +8,7 @@
     />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Đồ án Viễn Thông 2 | Quỹ phát triển TNUT</title>
+    <title>CSV TNUT | Quỹ phát triển TNUT</title>
     <!-- Favicon-->
     <link rel="icon" href="/icon/Logo Khoa FEE_2020 (xanh sam)_Vi.png" />
     <!-- Bootstrap Icons-->
@@ -35,15 +35,10 @@
     />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link rel="icon" href="{{ asset('/icon/favicon.png') }}" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/style_old.css') }}" />
+     {{-- style_old đã bao gồm Boostrap --}}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style_old.css') }}" /> 
     <link rel="stylesheet" href="{{ asset('css/slick_style.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/dropdown.css') }}" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      
-      crossorigin="anonymous"
-    />
     <style>
       body {
         overflow-x: hidden;
