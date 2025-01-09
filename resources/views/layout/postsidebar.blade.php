@@ -5,13 +5,13 @@
             <a href="{{route('sukien')}}" class="text-dark">Hợp tác</a>
         </li>
         <li class="list-group-item">
-            <a href="{{route('tinhnguoicodien')}}" class="text-dark">Chia sẻ</a>
+            <a href="{{route('tinhnguoicodien')}}" class="text-dark">Tình người cơ điện</a>
         </li>
         <li class="list-group-item">
-            <a href="{{route('hoicodiencactinh')}}" class="text-dark">Kết nối</a>
+            <a href="{{route('hoicodiencactinh')}}" class="text-dark">Hội cơ điện các tỉnh</a>
         </li>
         <li class="list-group-item">
-            <a href="{{route('tieubieu')}}" class="text-dark">Thành công</a>
+            <a href="{{route('tieubieu')}}" class="text-dark">Gương mặt cựu sinh viên tiêu biểu</a>
         </li>
     </ul>
 </div>

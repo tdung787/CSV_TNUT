@@ -89,7 +89,7 @@
                     </li>
                     <li>
                         <div class="col-6">
-                            <img src="img/Picture1.png" alt="" />
+                            <img src="{{ asset('img/Picture1.png') }}" alt="" />
                         </div>
                     </li>
                 </ul>
@@ -101,7 +101,7 @@
                     <a href="mailto:office@tnut.edu.vn"><i class="fas fa-envelope me-2"></i>office@tnut.edu.vn</a>
                 </div>
                 <div class="col-6">
-                    <img src="img/Picture1.png" alt="" />
+                    <img src="{{ asset('img/Picture1.png') }}" alt="" />
                 </div> --}}
             </div>
         </div>

@@ -16,7 +16,7 @@
     <!-- SimpleLightbox plugin CSS-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link rel="stylesheet" type="text/css" href="{{ asset('slick/slick.css') }}" />
@@ -26,8 +26,8 @@
     <link rel="stylesheet" href="{{ asset('css/posts.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/dropdown.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/slick_style.css') }}" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+
     <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
     <!-- <link rel="stylesheet" href="css/about.css" /> -->
     <style>
@@ -585,7 +585,7 @@
                                         <a href="{{ route('register') }}">Đăng ký thông tin</a>
                                     </li>
                                     <li class="list-group-item c5">
-                                        <a href="{{ route('hoicodiencactinh') }}">Kết nối cựu sinh viên</a>
+                                        <a href="{{ route('hoicodiencactinh') }}">Hội cơ điện các tỉnh</a>
                                     </li>
                                     <li class="list-group-item c5">
                                         <a href="/blog/hop-tac-11030000">Tham gia CLB kết nối</a>
@@ -707,7 +707,7 @@
                             <img class="img-fluid" src="img/ttcsv/7.png" alt="..." />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Kết nối</div>
+                                <div class="project-name">Hội cơ điện các tỉnh</div>
                             </div>
                         </a>
                     </div>
@@ -716,7 +716,7 @@
                             <img class="img-fluid" src="img/ttcsv/8.png" alt="..." />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Chia sẻ</div>
+                                <div class="project-name">Tình người cơ điện</div>
                             </div>
                         </a>
                     </div>
@@ -734,7 +734,7 @@
                             <img class="img-fluid" src="img/ttcsv/10.png" alt="..." />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Thành công</div>
+                                <div class="project-name">Gương mặt tiêu biểu</div>
                             </div>
                         </a>
                     </div>
@@ -863,21 +863,21 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
     <script src="{{ asset('js/scripts_old.js') }}"></script>
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+         crossorigin="anonymous">
     </script>
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="{{ asset('slick/slick.js') }}"></script>
     <script src="{{ asset('js/scripts.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+         crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+         crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"  crossorigin="anonymous"></script>
 
 </body>
 
