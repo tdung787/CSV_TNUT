@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AlumniController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CsvController;
 use Illuminate\Support\Facades\Route;
@@ -58,10 +59,6 @@ Route::get('/quyphattrien', [CsvController::class, 'quyphattrien'])->name('quyph
 
 Route::get('/dangkydonggop', [CsvController::class, 'dangkydonggop'])->name('dangkydonggop');
 
-Route::get('/list', [CsvController::class, 'list'])->name('lists');
-
-Route::get('/list/{user}', [CsvController::class, 'show'])->name('lists.show');
-
 Route::post('/upload', [CsvController::class, 'upload'])->name('ckeditor.upload');
 
 Route::post('/create', [CsvController::class, 'create'])->name('create_post');
@@ -82,3 +79,13 @@ Route::post('/logout', [AuthController::class, 'logout'])
     ->name('logout')
     ->middleware('auth');
 //auth
+
+//alumni
+Route::get('/alumni', [AlumniController::class, 'alumni'])->name('alumni');
+
+Route::post('/alumni', [AlumniController::class, 'store']);
+
+Route::get('/list', [AlumniController::class, 'list'])->name('lists');
+
+Route::get('/list/{alumnus}', [AlumniController::class, 'show'])->name('lists.show');
+//alumni

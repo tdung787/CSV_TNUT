@@ -171,13 +171,19 @@
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    {{ Auth::user()->ten }}
+                    {{ Auth::user()->name }}
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    @if (!Auth::user()->is_admin)
+                    {{-- @if (!Auth::user()->is_admin)
                     <li><a class="dropdown-item" href="{{ route('lists.show',Auth::user()->id) }}">Thông tin cá nhân</a></li>
                     <div class="dropdown-divider"></div>
-                    @endif
+                    @endif --}}
+                        @if (Auth::user()->is_admin)
+                        <li>
+                          <a class="dropdown-item" href="{{ route('alumni') }}">Thêm CSV</a>
+                          <div class="dropdown-divider"></div>
+                        </li>
+                        @endif
                         @if (Auth::user()->is_admin)
                         <li>
                           <a class="dropdown-item" href="{{ route('admin') }}">Admin panel</a>

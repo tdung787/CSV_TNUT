@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CreatePostRequest;
+use App\Models\Alumni;
 use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -177,36 +178,5 @@ class CsvController extends Controller
         $post->save();
 
         return redirect()->back();
-    }
-    public function list()
-    {
-        $users = User::latest();
-
-        if (request()->has('search')) {
-            $users = $users->search(request('search', null));
-        }
-        if (request()->has('khoa')) {
-            $users = $users->khoa(request('khoa'));
-        } else {
-            $users = $users->khoa();
-        }
-        if (request()->has('lop')) {
-            $users = $users->lop(request('lop', null));
-        }
-        if (request()->has('noilamviec')) {
-            $users = $users->noilamviec(request('noilamviec', null));
-        }
-        if (request()->has('tinh')) {
-            $users = $users->tinh(request('tinh', null));
-        }
-        if (request()->has('chuyennganh')) {
-            $users = $users->chuyennganh(request('chuyennganh', null));
-        }
-
-        return view('danhsach', ['users' => $users->paginate(5)]);
-    }
-    public function show(User $user)
-    {
-        return view('lylich', compact('user'));
     }
 }

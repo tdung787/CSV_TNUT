@@ -14,7 +14,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
 </head>
@@ -223,7 +222,8 @@
                             {{-- xaydung --}}
                             {{-- congnghecodien --}}
                             <option value="Kinh tế công nghiệp"
-                                {{ request()->input('chuyennganh') == 'Kinh tế công nghiệp' ? 'selected' : '' }}>Kinh tế công nghiệp</option>
+                                {{ request()->input('chuyennganh') == 'Kinh tế công nghiệp' ? 'selected' : '' }}>Kinh
+                                tế công nghiệp</option>
                             <option value="Quản lý công nghiệp"
                                 {{ request()->input('chuyennganh') == 'Quản lý công nghiệp' ? 'selected' : '' }}>
                                 Quản lý công nghiệp</option>
@@ -281,40 +281,37 @@
                                         <th class="text-center" style="width: 15%"><span>Năm tốt nghiệp</span></th>
                                         <th class="text-center"><span>Khoa</span></th>
                                         <th class="text-center"><span>Chuyên ngành</span></th>
-                                        <th class="text-center"><span>#</span></th>
+                                        {{-- <th class="text-center"><span>#</span></th> --}}
                                     </tr>
                                 </thead>
-                                @forelse ($users as $user)
-                                    @if (!$user->is_admin)
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <img src="{{ $user->getImageURL() }}" alt="" />
-                                                    <a href=" {{ route('lists.show', $user->id) }} "
-                                                        class="user-link">
-                                                        {{ $user->ten }} </a>
-                                                    <span class="user-subhead"> {{ $user->email }} </span>
+                                @forelse ($alumni as $alumnus)
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <img src="{{ $alumnus->getImageURL() }}" alt="" />
+                                                <a href=" {{ route('lists.show', $alumnus->id) }} " class="user-link">
+                                                    {{ $alumnus->ten }} </a>
+                                                <span class="user-subhead"> {{ $alumnus->email }} </span>
+                                            </td>
+                                            <td class="text-center">
+                                                {{ date('d-m-Y', strtotime($alumnus->ngaysinh)) }}
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="label label-danger"> {{ $alumnus->khoa }} </span>
+                                            </td>
+                                            <td class="text-center"> {{ $alumnus->chuyennganh }} </td>
+                                            {{-- @can('update', $alumnus)
+                                                <td style="width: 2%">
+                                                    <a href="{{ route('alumnus.edit', $alumnus->id) }}" class="table-link">
+                                                        <span class="fa-stack">
+                                                            <i class="fa fa-square fa-stack-2x"></i>
+                                                            <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                                                        </span>
+                                                    </a>
                                                 </td>
-                                                <td class="text-center">
-                                                    {{ date('d-m-Y', strtotime($user->birthdate)) }}
-                                                </td>
-                                                <td class="text-center">
-                                                    <span class="label label-danger"> {{ $user->khoa }} </span>
-                                                </td>
-                                                <td class="text-center"> {{ $user->chuyennganh }} </td>
-                                                @can('update', $user)
-                                                    <td style="width: 2%">
-                                                        <a href="{{ route('users.edit', $user->id) }}" class="table-link">
-                                                            <span class="fa-stack">
-                                                                <i class="fa fa-square fa-stack-2x"></i>
-                                                                <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                                            </span>
-                                                        </a>
-                                                    </td>
-                                                @endcan
-                                            </tr>
-                                        </tbody>
-                                    @endif
+                                            @endcan --}}
+                                        </tr>
+                                    </tbody>
                                 @empty
                                     <p class="fw-bold fs-4 text-center mt-2 text-danger">Không có người dùng</p>
                                 @endforelse
@@ -323,19 +320,19 @@
                     </div>
                 </div>
             </div>
-            {{ $users->withQueryString()->links() }}
+            {{ $alumni->withQueryString()->links() }}
         </div>
     </div>
     @include('layout.footer')
     <script src="{{ asset('js/scripts_old.js') }}"></script>
     <script src="{{ asset('js/scripts.js') }}"></script>
     <script src="{{ asset('slick/slick.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
-</script>
+    </script>
     <script>
         const khoaNgheMap = {
             "Cơ khí": [{

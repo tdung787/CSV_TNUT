@@ -34,15 +34,10 @@
     />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link rel="icon" href="{{ asset('/icon/favicon.png') }}" />
+     {{-- style_old đã bao gồm Boostrap --}}
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style_old.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/slick_style.css') }}" />
     <link rel="stylesheet" href="{{asset('css/dropdown.css')}}" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      
-      crossorigin="anonymous"
-    />
     <style>
       body {
         overflow-x: hidden;

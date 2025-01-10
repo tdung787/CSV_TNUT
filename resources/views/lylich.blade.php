@@ -178,8 +178,8 @@
         <div class="profile-bg"></div>
         <section class="container">
             <aside class="profile-image">
-                <img class="profile-image img-responsive" src=" {{$user->getImageURL()}} "
-                    onerror="this.src='https://www.hutech.edu.vn/cuusinhvien/images/no.jpg'" />
+                <img class="profile-image img-responsive" src=" {{$alumnus->getImageURL()}} "
+                     />
                 <!-- <a class="camera" href="#">
             <i class="fas fa-camera"></i>
           </a> -->
@@ -200,31 +200,31 @@
               </div>
             </div> -->
                 <div class="item2 item">
-                  <div class="col-sm-12"><b>Họ tên:</b> {{$user->ten}} </div>
+                  <div class="col-sm-12"><b>Họ tên:</b> {{$alumnus->ten}} </div>
                   <div class="col-sm-12">
                     <b>Ngày sinh:</b>
-                    {{ date('d-m-Y', strtotime($user->birthdate)) }}
+                    {{ date('d-m-Y', strtotime($alumnus->ngaysinh)) }}
                   </div>
                         <div class="col-sm-12">
-                            <b>Tỉnh:</b> {{ $user->diachi }}
+                            <b>Tỉnh:</b> {{ $alumnus->diachi }}
                         </div>
                         <div class="col-sm-12">
-                            <b>Quê quán:</b> {{ $user->quequan }}
+                            <b>Quê quán:</b> {{ $alumnus->quequan }}
                         </div>
-                        <div class="col-sm-12"><b>Email:</b> {{ $user->email }}</div>
-                        <div class="col-sm-12"><b>Điện thoại:</b> {{ $user->sdt }}</div>
+                        <div class="col-sm-12"><b>Email:</b> {{ $alumnus->email }}</div>
+                        <div class="col-sm-12"><b>Điện thoại:</b> {{ $alumnus->sdt }}</div>
                         <div class="col-sm-12">
-                            <b>Nơi công tác:</b> {{ $user->noilamviec }}
+                            <b>Nơi công tác:</b> {{ $alumnus->noilamviec }}
                         </div>
                     </div>
                     <div class="item3 item">
-                        <div class="col-sm-12"><b>Lớp:</b> {{ $user->lop }}</div>
-                        <div class="col-sm-12"><b>Niên khóa:</b> {{ $user->nienkhoa }}</div>
-                        <div class="col-sm-12"><b>Khoa:</b>  {{ $user->khoa }}</div>
+                        <div class="col-sm-12"><b>Lớp:</b> {{ $alumnus->lop }}</div>
+                        <div class="col-sm-12"><b>Niên khóa:</b> {{ $alumnus->nienkhoa }}</div>
+                        <div class="col-sm-12"><b>Khoa:</b>  {{ $alumnus->khoa }}</div>
                         <div class="col-sm-12">
-                            <b>Ngành:</b> {{ $user->chuyennganh }}
+                            <b>Ngành:</b> {{ $alumnus->chuyennganh }}
                         </div>
-                        <div class="col-sm-12"><b>Hệ đào tào:</b> {{ $user->hedaihoc }}</div>
+                        <div class="col-sm-12"><b>Hệ đào tào:</b> {{ $alumnus->hedaihoc }}</div>
                     </div>
                 </div>
 

@@ -34,14 +34,14 @@
         line-height: 1.6em;
         background-color: #fff;
     }
-
+/* 
     a {
         color: #a61d37;
     }
 
     a:hover {
         color: #6b1021;
-    }
+    } */
 
     .input-group-text {
         color: #777;
@@ -256,9 +256,9 @@
         font-family: "Roboto Condensed", sans-serif;
     }
 
-    .textpane:hover {
+    /* .textpane:hover {
         text-decoration: underline;
-    }
+    } */
 
     #headerBottom.fixed-top {
         background: #fff;
@@ -623,7 +623,7 @@
     }
 
     /*footer================*/
-    footer {
+    /* footer {
         background-color: #313131;
     }
 
@@ -641,7 +641,7 @@
         color: #fff;
         margin-left: 0.25rem;
         text-decoration: underline;
-    }
+    } */
 
     /**/
 
@@ -1402,15 +1402,15 @@
         border-bottom: 2px solid #a61d37;
     }
 
-    #footerBt {
+    /* #footerBt {
         height: 3.6875rem;
         padding-top: 0;
         padding-bottom: 0;
         line-height: 3.6875rem;
         overflow: hidden;
         margin-top: -0.75rem;
-        /* border-top: 1px solid #fff;*/
-    }
+        border-top: 1px solid #fff;
+    } */
 
     .copyright {
         line-height: 3.6875rem;
@@ -1762,10 +1762,10 @@
         margin-bottom: 3px;
     }
 
-    .mnfooter h6 {
+    /* .mnfooter h6 {
         font-size: 13px;
         line-height: 1.6em;
-    }
+    } */
 
     .cardTl h1,
     .cardTl h3 {
@@ -2089,9 +2089,9 @@
         font-style: italic;
     }
 
-    #footerBtMb {
+    /* #footerBtMb {
         display: none;
-    }
+    } */
 
     .v10btn {
         padding: 6px 5px;
@@ -2229,9 +2229,9 @@
         background-color: #f2f2f2 !important;
     }
 
-    .fw-bold:hover {
+    /* .fw-bold:hover {
         text-decoration: underline;
-    }
+    } */
 
     .rnbold {
         text-align: justify;

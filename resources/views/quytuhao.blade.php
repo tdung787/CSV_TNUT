@@ -63,7 +63,7 @@
         margin: 1% 0 2% 0;
         font-size: larger;
       }
-      .fw-bold a {
+      /* .fw-bold a {
         color: #a61d37;
         font-size: large;
         font-weight: 600;
@@ -71,7 +71,7 @@
       }
       .fw-bold a:hover {
         text-decoration: underline;
-      }
+      } */
       .list-group-flush > .list-group-item {
         background: url() no-repeat 0 1rem;
       }
