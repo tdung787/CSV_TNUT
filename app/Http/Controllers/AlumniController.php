@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateAlumniRequest;
+use App\Http\Requests\UpdateAlumniRequest;
+use App\Http\Requests\UpdateUserRequest;
 use App\Models\Alumni;
 use Illuminate\Http\Request;
 use App\Models\Post;
@@ -23,7 +25,7 @@ class AlumniController extends Controller
         $validated = $request->validated();
 
         $alumni = Alumni::create($validated);
-        return redirect()->route('home');
+        return redirect()->route('home')->with('success', 'Thêm CSV thành công!');
     }
 
 
@@ -57,5 +59,34 @@ class AlumniController extends Controller
     public function show(Alumni $alumnus)
     {
         return view('lylich', compact('alumnus'));
+    }
+
+    public function edit(Alumni $alumnus)
+    {
+        $this->authorize('update', $alumnus);
+
+        return view('alumni.alumni_edit', compact('alumnus'));
+    }
+
+    public function update(UpdateAlumniRequest $request, Alumni $alumnus)
+    {
+        $this->authorize('update', $alumnus);
+
+        $validated = $request->validated();
+
+        // if ($request->has('image')) {
+        //     $imagePath = request()->file('image')->store('profile', 'public');
+        //     $validated['image'] = $imagePath;
+
+        //     Storage::disk('public')->delete($user->image ?? '');
+        // }
+        $alumnus->update($validated);
+        return redirect()->route('csv')->with('success', 'Cập nhật CSV thành công!');
+    }
+
+    public function destroy(Alumni $alumnus)
+    {
+        $alumnus->delete();
+        return redirect(route('csv'))->with('success', 'Xóa CSV thành công!');
     }
 }

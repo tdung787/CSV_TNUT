@@ -15,6 +15,10 @@ Route::get('/home', [CsvController::class, 'index'])->name('home');
 //admin
 Route::get('/admin', [AdminController::class, 'index'])->name('admin')->middleware(['auth', 'can:admin']);
 
+Route::get('/admin/csv', [AdminController::class, 'csv'])->name('admin_csv')->middleware(['auth', 'can:admin']);
+
+// Route::get('/admin/baiviet', [AdminController::class, 'baiviet'])->name('admin_baiviet')->middleware(['auth', 'can:admin']);
+
 Route::resource('users', AdminController::class)
     ->only('edit', 'update')
     ->middleware('auth');
@@ -81,6 +85,12 @@ Route::post('/logout', [AuthController::class, 'logout'])
 //auth
 
 //alumni
+Route::resource('alumni', AlumniController::class)
+    ->only('edit', 'update')
+    ->middleware(['auth', 'can:admin']);
+
+Route::delete('/alumni/{alumnus}', [AlumniController::class, 'destroy'])->name('alumni.destroy')->middleware(['auth', 'can:admin']);
+
 Route::get('/alumni', [AlumniController::class, 'alumni'])->name('alumni');
 
 Route::post('/alumni', [AlumniController::class, 'store']);

@@ -2276,6 +2276,7 @@
 
 <body class="h-100 d-flex flex-column h-100">
     @include('layout.nav')
+    @include('layout.success_mess')
     <div id="body">
         <div class="mb-5">
             <div id="rnbntopintro"><!--ajax banner top--></div>
@@ -2288,7 +2289,11 @@
                     <div class="mb-3 widget p-3 bg-light rounded">
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">
-                                <a href="su-mang-tam-nhin.html" class="fw-bold text-dark">Users</a>
+                                <a href="{{route('admin')}}" class="fw-bold text-dark">Users</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="{{route('admin_csv')}}"
+                                    class="fw-bold text-dark">Cựu sinh viên</a>
                             </li>
                             <li class="list-group-item">
                                 <a href="https://www.tnut.edu.vn/to-chuc-doan-the-or100400.html"
@@ -2300,67 +2305,9 @@
                         <div id="rnbnright1"><!--ajax banner trai tren 1--></div>
                     </div>
                 </div>
-                <div class="col-md-9 col-sm-9">
-                    <div class="mgt20 text-justify">
-                        <table class="table table-striped">
-                            <thead class="table-dark">
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Tên</th>
-                                    <th>Email</th>
-                                    <th>Ngày tạo</th>
-                                    <th class="text-center">Chức vụ</th>
-                                    <th class="text-center">#</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($users as $user)
-                                    <tr>
-                                        <td>{{ $user->id }}</td>
-                                        <td><a href="{{ route('lists.show', $user) }}">{{ $user->name }}</a></td>
-                                        <td>{{ $user->email }}</td>
-                                        <td>{{ $user->created_at->toDateString() }}</td>
-                                        @if ($user->is_admin)
-                                            <td class="text-center">Admin</td>
-                                        @elseif ($user->is_poster)
-                                            <td class="text-center">Editor</td>
-                                        @else
-                                            <td class="text-center">User</td>
-                                        @endif
-                                        <td class="text-center d-flex justify-content-center">
-                                            <!-- Áp dụng lớp CSS btn-group vào đây -->
-                                            @if ($user->is_admin)
-                                            @elseif (!$user->is_poster)
-                                                <form action="{{ route('admin.update.poster', $user->id) }}"
-                                                    method="POST">
-                                                    @csrf
-                                                    <button type="submit" class="btn btn-success btn-sm">Granted
-                                                        Editor</button>
-                                                </form>
-                                            @else
-                                                <form action="{{ route('admin.delete.poster', $user->id) }}"
-                                                    method="POST">
-                                                    @csrf
-                                                    <button type="submit" class="btn btn-secondary btn-sm">Cease
-                                                        Editor</button>
-                                                </form>
-                                            @endif
-                                            <a href="{{ route('users.edit', $user) }}"><button type="button"
-                                                    class="btn btn-dark btn-sm mx-2">Edit</button></a>
-                                            <form method="POST" action="{{ route('users.destroy', $user->id) }}">
-                                                @csrf
-                                                @method('delete')
-                                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                                            </form>
-                                        </td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                        {{ $users->links() }}
-                    </div>
 
-                </div>
+                @yield('content')
+                
             </div>
         </div>
         <!--footer-->

@@ -23,7 +23,7 @@ class AuthController extends Controller
             $validated['password'] = Hash::make($validated['password']);
         }
         $user = User::create($validated);
-        return redirect()->route('home');
+        return redirect()->route('home')->with('success', 'Đăng ký thành công!');
     }
 
     public function login()
@@ -43,7 +43,7 @@ class AuthController extends Controller
         if (auth()->attempt($validated)) {
 
             request()->session()->regenerate();
-            return redirect()->back();
+            return redirect()->route('home')->with('success', 'Đăng nhập thành công!');
         }
 
         return redirect()->route('login')->withErrors([

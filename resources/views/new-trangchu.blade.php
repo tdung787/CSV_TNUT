@@ -363,6 +363,7 @@
 <body id="page-top">
     <!-- Navigation-->
     @include('layout.nav')
+    @include('layout.success_mess')
     <!-- Masthead-->
     <div id="myfkncarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">

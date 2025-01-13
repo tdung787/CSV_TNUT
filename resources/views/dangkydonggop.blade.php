@@ -176,7 +176,7 @@
                 </div>
                 <div class="input-box">
                   <span class="details">Lĩnh vực</span>
-                  <select class="form-select" name="hedaihoc" id="hệ-đào-tạo">
+                  <select class="form-select" name="hedaotao" id="hệ-đào-tạo">
                     <option style="display:none" disabled selected value> </option>
                     <option value="">Học bổng sinh viên</option>
                     <option value="">Quỹ phát triển tài năng ĐHCĐ</option>

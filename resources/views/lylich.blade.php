@@ -224,7 +224,7 @@
                         <div class="col-sm-12">
                             <b>Ngành:</b> {{ $alumnus->chuyennganh }}
                         </div>
-                        <div class="col-sm-12"><b>Hệ đào tào:</b> {{ $alumnus->hedaihoc }}</div>
+                        <div class="col-sm-12"><b>Hệ đào tào:</b> {{ $alumnus->hedaotao }}</div>
                     </div>
                 </div>
 
