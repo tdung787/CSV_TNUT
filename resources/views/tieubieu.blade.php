@@ -299,25 +299,28 @@
         <div class="row" id="browseNews">
             <div id="marginsk" class="col-md-8 col-sm-12">
                 @foreach ($posts as $post)
-                @if ($post->category == 'Thành công')
+                @if ($post->category->title == 'Test')
                 <div class="item border bg-light mb-3 rounded">
                     <div class="thumb">
-                        <a href="{{ route('tieubieu.show', $post->id) }}"
-                            title="Bế mạc Đánh giá Chương trình đào tạo tiên tiến các ngành K thuật cơ khí; Kỹ thuật điện theo tiêu chuẩn AUN – QA"><img
-                                src="{{$post->thumbnail}}" width="100%" class="rounded"
-                                alt="Bế mạc Đánh giá Chương trình đào tạo tiên tiến các ngành K thuật cơ khí; Kỹ thuật điện theo tiêu chuẩn AUN – QA" /></a>
+                        <a href="{{ route('tieubieu.show', ['category' => $categories->firstWhere('id', $post->category_id)->slug, 'post' => $post->slug]) }}"
+                            @php
+                            $image = $post->images->first(); // Lấy ảnh đầu tiên của sản phẩm (nếu có nhiều ảnh)
+                            @endphp
+                            title=""><img
+                                src="{{ asset('storage/' . ($image ? $image->file_path : 'default-image.jpg')) }}" width="100%" class="rounded"
+                                alt="" /></a>
                     </div>
                     <div class="text p-3">
                         <div class="h5 fw-bold idx4">
                             <h3>
                                 <a
-                                    href="{{ route('tieubieu.show', $post->id) }}">{{ $post->tittle }}</a>
+                                    href="{{ route('tieubieu.show', ['category' => $categories->firstWhere('id', $post->category_id)->slug, 'post' => $post->slug]) }}">{{ $post->title }}</a>
                             </h3>
                         </div>
                         <div class="small text-secondary">
                             <div class="cattegolist">
-                                <span class="catnamelist" title="Sự kiện"><a href="{{route('tieubieu')}}">{{$post->category}}</a></span>
-                                |  <span class="dates"><a href="#">{{ $post->created_at->format('d/m/Y') }}</a></span>
+                                <span class="catnamelist" title="{{$post->category->title}}"><a href="{{route('tieubieu')}}">{{$post->category->title}}</a></span>
+                                |  <span class="dates"><a href="#">{{ $post->published_at->format('d/m/Y') }}</a></span>
                             </div>
                         </div>
                         <div>

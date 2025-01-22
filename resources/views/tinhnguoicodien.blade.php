@@ -298,25 +298,28 @@
             <div class="row" id="browseNews">
                 <div id="marginsk" class="col-md-8 col-sm-12">
                     @foreach ($posts as $post)
-                    @if ($post->category == 'Chia sẻ')
+                    @if ($post->category->title == 'Test')
                     <div class="item border bg-light mb-3 rounded">
                         <div class="thumb">
-                            <a href="{{ route('tinhnguoicodien.show', $post->id) }}"
-                                title="TẤT NIÊN K6 ĐẠI HỌC CƠ ĐIỆN"><img
-                                    src="{{$post->thumbnail}}"
+                            <a href="{{ route('tinhnguoicodien.show', ['category' => $categories->firstWhere('id', $post->category_id)->slug, 'post' => $post->slug]) }}"
+                                @php
+                                $image = $post->images->first(); // Lấy ảnh đầu tiên của sản phẩm (nếu có nhiều ảnh)
+                                @endphp
+                                title=""><img
+                                    src="{{ asset('storage/' . ($image ? $image->file_path : 'default-image.jpg')) }}"
                                     width="100%" class="rounded"
-                                    alt="TẤT NIÊN K6 ĐẠI HỌC CƠ ĐIỆN" /></a>
+                                    alt="" /></a>
                         </div>
                         <div class="text p-3">
                             <div class="h5 fw-bold idx4">
                                 <h3>
-                                    <a href="{{ route('tinhnguoicodien.show', $post->id) }}">{{ $post->tittle }}</a>
+                                    <a href="{{ route('tinhnguoicodien.show', ['category' => $categories->firstWhere('id', $post->category_id)->slug, 'post' => $post->slug]) }}">{{ $post->title }}</a>
                                 </h3>
                             </div>
                             <div class="small text-secondary">
                                 <div class="cattegolist">
-                                    <span class="catnamelist" title="Tình người cơ điện"><a href="{{route('tinhnguoicodien')}}">{{$post->category}}</a></span>
-                                    | <span class="dates"><a href="">{{ $post->created_at->format('d/m/Y') }}</a></span>
+                                    <span class="catnamelist" title="{{$post->category->title}}"><a href="{{route('tinhnguoicodien')}}">{{$post->category->title}}</a></span>
+                                    | <span class="dates"><a href="">{{ $post->published_at->format('d/m/Y') }}</a></span>
                                 </div>
                             </div>
                             <div>

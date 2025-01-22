@@ -37,23 +37,33 @@ Route::get('/banchaphanh', [CsvController::class, 'banchaphanh'])->name('banchap
 
 Route::get('/thuvienhinhanh', [CsvController::class, 'thuvienhinhanh'])->name('thuvienhinhanh');
 
+//post
+
 Route::get('/hoicodiencactinh', [CsvController::class, 'hoicodiencactinh'])->name('hoicodiencactinh');
 
-Route::get('/hoicodiencactinh/{post}', [CsvController::class, 'hoicodiencactinh_show'])->name('hoicodiencactinh.show');
+Route::get('/hoicodiencactinh/{category:slug}/{post:slug}', [CsvController::class, 'hoicodiencactinh.show'])
+    ->name('hoicodiencactinh.show');
 
 Route::get('/tinhnguoicodien', [CsvController::class, 'tinhnguoicodien'])->name('tinhnguoicodien');
 
-Route::get('/tinhnguoicodien/{post}', [CsvController::class, 'tinhnguoicodien_show'])->name('tinhnguoicodien.show');
+Route::get('/tinhnguoicodien/{category:slug}/{post:slug}', [CsvController::class, 'tinhnguoicodien_show'])
+    ->name('tinhnguoicodien.show');
 
 Route::get('/tieubieu', [CsvController::class, 'tieubieu'])->name('tieubieu');
 
-Route::get('/tieubieu/{post}', [CsvController::class, 'tieubieu_show'])->name('tieubieu.show');
-
-Route::get('/sumenh', [CsvController::class, 'sumenh'])->name('sumenh');
+Route::get('/tieubieu/{category:slug}/{post:slug}', [CsvController::class, 'tieubieu.show'])
+    ->name('tieubieu.show');
 
 Route::get('/sukien', [CsvController::class, 'sukien'])->name('sukien');
 
-Route::get('/sukien/{post}', [CsvController::class, 'sukien_show'])->name('sukien.show');
+Route::get('/sukien/{category:slug}/{post:slug}', [CsvController::class, 'sukien.show'])
+    ->name('sukien.show');
+
+//post
+
+Route::get('/sumenh', [CsvController::class, 'sumenh'])->name('sumenh');
+
+Route::view('/hdk10', 'bantin.hdk10');
 
 Route::get('/dieule', [CsvController::class, 'dieule'])->name('dieule');
 
@@ -99,3 +109,5 @@ Route::get('/list', [AlumniController::class, 'list'])->name('lists');
 
 Route::get('/list/{alumnus}', [AlumniController::class, 'show'])->name('lists.show');
 //alumni
+
+require __DIR__ . '/admin.php';

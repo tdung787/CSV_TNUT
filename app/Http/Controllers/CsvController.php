@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreatePostRequest;
 use App\Models\Alumni;
-use App\Models\Post;
+use App\Models\Admin\Post;
+use App\Models\Admin\PostCategory;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Post as GlobalPost;
 
 class CsvController extends Controller
 {
@@ -36,100 +38,78 @@ class CsvController extends Controller
         return view('dangkydonggop');
     }
 
-    //post
-    public function sv02()
-    {
-        return view('bantin.02sv');
-    }
-    public function vuquangsang()
-    {
-        return view('bantin.vuquangsang');
-    }
-    public function k10thamtruong()
-    {
-        return view('bantin.k10thamtruong');
-    }
-    public function k10xn()
-    {
-        return view('bantin.k10xn');
-    }
-    public function k27()
-    {
-        return view('guongmattieubieu.k27');
-    }
-    public function hdk10()
-    {
-        return view('guongmattieubieu.hdk10');
-    }
-    public function hdk30()
-    {
-        return view('guongmattieubieu.hdk30');
-    }
-    public function guongmat1()
-    {
-        return view('guongmattieubieu.guongmat1');
-    }
-    //post
-
     public function hoicodiencactinh()
     {
-        $posts = Post::latest()->get();
+        $posts = Post::latest('published_at')->paginate(6);
+        $categories = PostCategory::all();
 
-        return view('hoicodiencactinh', compact('posts'));
+        return view('hoicodiencactinh', compact('posts', 'categories'));
     }
 
-    public function hoicodiencactinh_show(Post $post)
-    {
-        $template = $post->template;
+    // public function hoicodiencactinh_show(Post $post)
+    // {
+    //     $template = $post->template;
 
-        $viewPath = 'hoicodiencactinh.' . $template;
+    //     $viewPath = 'hoicodiencactinh.' . $template;
 
-        return view($viewPath, compact('post'));
-    }
+    //     return view($viewPath, compact('post'));
+    // }
 
     public function tinhnguoicodien()
     {
-        $posts = Post::oldest()->get();
+        $posts = Post::latest('published_at')->paginate(6);
+        $categories = PostCategory::all();
 
-        return view('tinhnguoicodien', compact('posts'));
+        return view('tinhnguoicodien', compact('posts', 'categories'));
     }
 
-    public function tinhnguoicodien_show(Post $post)
+    public function tinhnguoicodien_show(PostCategory $category, Post $post)
     {
-        $template = $post->template;
+        // Đảm bảo sản phẩm thuộc danh mục
+        if ($post->category_id !== $category->id) {
+            abort(404);
+        }
 
-        $viewPath = 'tinhnguoicodien.' . $template;
+        $relatedPosts = Post::latest('published_at')
+            ->take(5) // Số lượng bài viết liên quan muốn hiển thị
+            ->get();
 
-        return view($viewPath, compact('post'));
+        return view('website.posts.show-only-post', [
+            'post' => $post,
+            'category' => $category,
+            'relatedPosts' => $relatedPosts
+        ]);
     }
     public function tieubieu()
     {
-        $posts = Post::oldest()->get();
+        $posts = Post::latest('published_at')->paginate(6);
+        $categories = PostCategory::all();
 
-        return view('tieubieu', compact('posts'));
+        return view('tieubieu', compact('posts', 'categories'));
     }
-    public function tieubieu_show(Post $post)
-    {
-        $template = $post->template;
+    // public function tieubieu_show(Post $post)
+    // {
+    //     $template = $post->template;
 
-        $viewPath = 'guongmattieubieu.' . $template;
+    //     $viewPath = 'guongmattieubieu.' . $template;
 
-        return view($viewPath, compact('post'));
-    }
+    //     return view($viewPath, compact('post'));
+    // }
     public function sukien()
     {
-        $posts = Post::oldest()->get();
+        $posts = Post::latest('published_at')->paginate(6);
+        $categories = PostCategory::all();
 
-        return view('sukien', compact('posts'));
+        return view('sukien', compact('posts', 'categories'));
     }
-    public function sukien_show(Post $post)
-    {
-        $template = $post->template;
+    // public function sukien_show(Post $post)
+    // {
+    //     $template = $post->template;
 
-        $viewPath = 'bantin.' . $template;
+    //     $viewPath = 'bantin.' . $template;
 
-        return view($viewPath, compact('post'));
-    }
+    //     return view($viewPath, compact('post'));
+    // }
     public function thuvienhinhanh()
     {
         return view('thuvienhinhanh');
