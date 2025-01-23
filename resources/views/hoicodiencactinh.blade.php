@@ -296,7 +296,7 @@
             <div class="row" id="browseNews">
                 <div id="marginsk" class="col-md-8 col-sm-12">
                     @foreach ($posts as $post)
-                    @if ($post->category->title == 'Test')
+                    {{-- @if ($post->category->title == 'Hội cơ điện các tỉnh') --}}
                         <div class="item border bg-light mb-3 rounded">
                             <div class="thumb">
                                 <a href="{{ route('hoicodiencactinh.show', ['category' => $categories->firstWhere('id', $post->category_id)->slug, 'post' => $post->slug]) }}" title=""><img
@@ -324,9 +324,10 @@
                                 </div>
                             </div>
                         </div>
-                    @endif
+                    {{-- @endif --}}
                     @endforeach
                     <hr />
+                    {{ $posts->withQueryString()->links() }}
                 </div>
 
                 <div class="col-md-4 col-sm-12">

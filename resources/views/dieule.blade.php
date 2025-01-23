@@ -14,7 +14,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
 </head>
@@ -250,9 +249,11 @@
         padding-top: 0 !important;
         padding-bottom: 0 !important;
     }
+
     .fs-roboto {
         font-family: "Roboto Condensed", sans-serif;
     }
+
     .textpane:hover {
         text-decoration: underline;
     }
@@ -264,6 +265,7 @@
         -moz-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
         -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
     }
+
     #headerBottom.fixed-top .fs-roboto {
         line-height: normal !important;
     }
@@ -571,11 +573,13 @@
         border-width: 1px;
         border-style: solid;
     }
+
     /**/
     #gallery {
         background: url(/img/bg_gallery.png) no-repeat 50% 100%;
         background-size: 100% auto;
     }
+
     .tlsolid {
         font-weight: 700;
         color: #f4623a;
@@ -1419,7 +1423,6 @@
     }
 
     .ftBt-left {
-        background-color: #a61d37;
         margin-top: 0.5rem;
         position: relative;
     }
@@ -1431,7 +1434,6 @@
         right: 100%;
         width: 60rem;
         height: 75px;
-        background: #a61d37;
         bottom: 0;
         top: 0rem;
     }
@@ -2164,21 +2166,21 @@
     /**/
     /* ============ desktop view ============ */
 
-        .dropdown-menu>li:hover {
-            background-color: #f1f1f1;
-        }
+    .dropdown-menu>li:hover {
+        background-color: #f1f1f1;
+    }
 
-        .dropdown-menu>li:hover>.submenu {
-            display: block;
-        }
+    .dropdown-menu>li:hover>.submenu {
+        display: block;
+    }
     }
 
     /* ============ desktop view .end// ============ */
     /* ============ small devices ============ */
 
-        .font-14 {
-            font-size: 14px;
-        }
+    .font-14 {
+        font-size: 14px;
+    }
     }
 
     /* ============ small devices .end// ============ */
@@ -2229,8 +2231,9 @@
     .rnred {
         color: #a61d37 !important;
     }
-    h3{
-      font-size: calc(1.275rem + .3vw);
+
+    h3 {
+        font-size: calc(1.275rem + .3vw);
     }
 
     /* ============ rnet k46kmt.end// ============ */
@@ -2243,7 +2246,7 @@
             <div id="rnbntopintro"><!--ajax banner top--></div>
         </div>
         <div class="container-lg mb-5">
-          <h2 class="minTl">Điều lệ hoạt động</h2>
+            <h2 class="minTl">Điều lệ hoạt động</h2>
             <div class="row">
                 <div class="col-md-8 col-sm-8">
                     <div class="mgt20 text-justify">
@@ -2253,32 +2256,44 @@
                             <li>- Tên giao dịch trong nước: Hội cựu sinh viên TNUT</li>
                             <li>- Tên giao dịch nước ngoài: TNUT University Alumni</li>
                             <li>- Tên viết tắt tiếng Anh: TNUT</li>
-                            <li>- Hội có logo và thẻ hội riêng. Việc cấp phát sử dụng, quản lý thẻ Hội theo quy định của Hội.</li>
+                            <li>- Hội có logo và thẻ hội riêng. Việc cấp phát sử dụng, quản lý thẻ Hội theo quy định của
+                                Hội.</li>
                         </ul>
                         <div class="tlsolid mb-3 h4">ĐIỀU 2: HỘI CỰU SINH VIÊN TNUT ĐƯỢC THÀNH LẬP NHẰM MỤC ĐÍCH</div>
                         <ul>
-                            <li>- Thắt chặt tình đoàn kết giữa sinh viên các khóa, các ngành đã theo học tại trường TNUT. </li>
-                            <li>- Gắn kết CSV với các hoạt động của Trường; hỗ trợ SV thành công hơn trong công việc, hạnh phúc hơn cuộc sống sau khi ra trường.</li>
-                            <li>- Tạo mối quan hệ tốt đẹp giữa trường TNUT, cũng như sinh viên đang học của trường với các doanh nghiệp vì lợi ích lẫn nhau giữa trường TNUT, doanh nghiệp, CSV.</li>
-                            <li>- Tạo mối quan hệ giữa trường TNUT và trường bạn thông qua hoạt động giao lưu của CSV.</li>
+                            <li>- Thắt chặt tình đoàn kết giữa sinh viên các khóa, các ngành đã theo học tại trường
+                                TNUT. </li>
+                            <li>- Gắn kết CSV với các hoạt động của Trường; hỗ trợ SV thành công hơn trong công việc,
+                                hạnh phúc hơn cuộc sống sau khi ra trường.</li>
+                            <li>- Tạo mối quan hệ tốt đẹp giữa trường TNUT, cũng như sinh viên đang học của trường với
+                                các doanh nghiệp vì lợi ích lẫn nhau giữa trường TNUT, doanh nghiệp, CSV.</li>
+                            <li>- Tạo mối quan hệ giữa trường TNUT và trường bạn thông qua hoạt động giao lưu của CSV.
+                            </li>
                         </ul>
                         <div class="tlsolid mb-3 h4">ĐIỀU 3: HỘI CỰU SINH VIÊN TNUT CÓ CÁC CHỨC NĂNG</div>
-                                <ul>
-                            <li>- Xây dựng Cộng đồng CSV, tạo mối quan hệ chặt chẽ gắn kết giữa TNUT, cựu sinh viên và xã hội..</li>
+                        <ul>
+                            <li>- Xây dựng Cộng đồng CSV, tạo mối quan hệ chặt chẽ gắn kết giữa TNUT, cựu sinh viên và
+                                xã hội..</li>
                             <li>- Tạo điều kiện hỗ trợ các CSV nâng cao tri thức quản lý, nghề nghiệp,
-                                    đồng thời tạo điều kiện để CSV tham gia các hoạt động xã
-                                    hội.</li>
+                                đồng thời tạo điều kiện để CSV tham gia các hoạt động xã
+                                hội.</li>
                             <li>- Phát huy truyền thống tương trợ giữa các thế thế hệ.</li>
-                            <li>- Là diễn đàn trao đổi thông tin giữa các CSV TNUT với các tổ chức CSV của các trường khác.</li>
+                            <li>- Là diễn đàn trao đổi thông tin giữa các CSV TNUT với các tổ chức CSV của các trường
+                                khác.</li>
                         </ul>
                         <div class="tlsolid mb-3 h4">ĐIỀU 4: HỘI CỰU SINH VIÊN TNUT CÓ NHIỆM VỤ</div>
                         <ul>
-                            <li>- Tổ chức các hoạt động để hỗ trợ CSV phát huy tinh thần tương trợ giúp đỡ lẫn nhau giữa các thành viên nhằm đóng góp vào sự phát triển chung của nhà trường và xã hội.</li>
+                            <li>- Tổ chức các hoạt động để hỗ trợ CSV phát huy tinh thần tương trợ giúp đỡ lẫn nhau giữa
+                                các thành viên nhằm đóng góp vào sự phát triển chung của nhà trường và xã hội.</li>
                             <li>- Tìm hiểu nhu cầu được hỗ trợ của SV giúp SV thành công hơn sau khi ra trường.</li>
-                            <li>- Tổ chức giao lưu, trao đổi kinh nghiệm, họp mặt truyền thống nhằm thắt chặt tình đoàn kết giữa sinh viên các khóa, các ngành đã và đang theo học tại trường TNUT.</li>
-                            <li>- Tạo nguồn Quỹ phục vụ cho hoạt động chung của Hội bằng nguồn kinh phí từ việc tổ chức nhiều hoạt động hàng năm.</li>
-                            <li>- Thu hút các nguồn tài trợ của các tổ chức, cá nhân trong và ngoài nước góp vào sự phát triển của Hội cũng như của Trường TNUT.</li>
-                            <li>- Mỗi thành viên có nhiệm vụ giới thiệu, phát triển thành viên để cộng đòng CSV TNUT ngày càng lớn mạnh.</li>
+                            <li>- Tổ chức giao lưu, trao đổi kinh nghiệm, họp mặt truyền thống nhằm thắt chặt tình đoàn
+                                kết giữa sinh viên các khóa, các ngành đã và đang theo học tại trường TNUT.</li>
+                            <li>- Tạo nguồn Quỹ phục vụ cho hoạt động chung của Hội bằng nguồn kinh phí từ việc tổ chức
+                                nhiều hoạt động hàng năm.</li>
+                            <li>- Thu hút các nguồn tài trợ của các tổ chức, cá nhân trong và ngoài nước góp vào sự phát
+                                triển của Hội cũng như của Trường TNUT.</li>
+                            <li>- Mỗi thành viên có nhiệm vụ giới thiệu, phát triển thành viên để cộng đòng CSV TNUT
+                                ngày càng lớn mạnh.</li>
                         </ul>
                     </div>
                 </div>
@@ -2295,11 +2310,11 @@
     @include('layout.footer')
     <script src="{{ asset('js/scripts_old.js') }}"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
-</script>
+    </script>
 
 </html>

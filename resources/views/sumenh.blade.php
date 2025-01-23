@@ -13,7 +13,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -34,7 +33,8 @@
         line-height: 1.6em;
         background-color: #fff;
     }
-/* 
+
+    /*
     a {
         color: #a61d37;
     }
@@ -1417,7 +1417,6 @@
     }
 
     .ftBt-left {
-        background-color: #a61d37;
         margin-top: 0.5rem;
         position: relative;
     }
@@ -1429,7 +1428,6 @@
         right: 100%;
         width: 60rem;
         height: 75px;
-        background: #a61d37;
         bottom: 0;
         top: 0rem;
     }
@@ -2157,7 +2155,8 @@
         border-bottom: 0;
         border-left: 0.3em solid transparent;
     }
-    .text-center .slogan{
+
+    .text-center .slogan {
         display: flex;
         float: none;
         justify-content: center;
@@ -2279,7 +2278,8 @@
                                 hội
                                 nhập quốc tế”.</b></p>
                         <div class="text-center">
-                            <h5 class="slogan" style="font-family: var(--bs-body-font-family); font-weight: 500; color: #ff0000;">
+                            <h5 class="slogan"
+                                style="font-family: var(--bs-body-font-family); font-weight: 500; color: #ff0000;">
                                 <strong>Kết nối Hợp tác – Phát huy truyền thống – Xây dựng tương lai</strong>
                             </h5>
                         </div>
@@ -2340,6 +2340,6 @@
     <script src="{{ asset('js/scripts_old.js') }}"></script>
     <script type="text/javascript" src="{{ asset('slick/slick.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
 </html>

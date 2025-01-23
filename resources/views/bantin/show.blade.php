@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>02 SINH VIÊN TNUT ĐẠT GIẢI BA OLYMPIC TOÁN HỌC TOÀN QUỐC MÔN GIẢI TÍCH NĂM 2024</title>
+    <title>{{ $post->title }}</title>
     <!-- Favicon-->
     <link rel="icon" href="/icon/Logo Khoa FEE_2020 (xanh sam)_Vi.png" />
     <!-- Bootstrap Icons-->
@@ -126,16 +126,19 @@
         <div class="row">
             <div class="col-md-8 col-sm-12">
                 <div class="post"></div>
-                <div class="title">KẾT NỐI</div>
-                <b style="font-size: larger">HOẠT ĐỘNG CỦA HỘI SINH VIÊN K10</b>
+                <div class="title">{{$post->category->title}}</div>
+                <b style="font-size: larger">{{ $post->title }}</b>
 
-                <div class="text-justify" style="line-height:23px" id="Art_Pdesc">
+                {{-- <div class="text-justify" style="line-height:23px" id="Art_Pdesc">
                     <p style="text-align: center;"><iframe title="YouTube video player"
                             src="//www.youtube.com/embed/d-koRBO0ASw" width="560" height="315" frameborder="0"
                             allowfullscreen="allowfullscreen"></iframe></p>
                     <p style="text-align: center;"><iframe title="YouTube video player"
                             src="//www.youtube.com/embed/QOk4cFAccm0" width="560" height="315" frameborder="0"
                             allowfullscreen="allowfullscreen"></iframe></p>
+                </div> --}}
+                <div class="entry-content text-justify rte article__content js-toc-content">
+                    {!! $post->content !!}
                 </div>
                 <hr>
 

@@ -41,7 +41,7 @@ Route::get('/thuvienhinhanh', [CsvController::class, 'thuvienhinhanh'])->name('t
 
 Route::get('/hoicodiencactinh', [CsvController::class, 'hoicodiencactinh'])->name('hoicodiencactinh');
 
-Route::get('/hoicodiencactinh/{category:slug}/{post:slug}', [CsvController::class, 'hoicodiencactinh.show'])
+Route::get('/hoicodiencactinh/{category:slug}/{post:slug}', [CsvController::class, 'hoicodiencactinh_show'])
     ->name('hoicodiencactinh.show');
 
 Route::get('/tinhnguoicodien', [CsvController::class, 'tinhnguoicodien'])->name('tinhnguoicodien');
@@ -51,12 +51,12 @@ Route::get('/tinhnguoicodien/{category:slug}/{post:slug}', [CsvController::class
 
 Route::get('/tieubieu', [CsvController::class, 'tieubieu'])->name('tieubieu');
 
-Route::get('/tieubieu/{category:slug}/{post:slug}', [CsvController::class, 'tieubieu.show'])
+Route::get('/tieubieu/{category:slug}/{post:slug}', [CsvController::class, 'tieubieu_show'])
     ->name('tieubieu.show');
 
 Route::get('/sukien', [CsvController::class, 'sukien'])->name('sukien');
 
-Route::get('/sukien/{category:slug}/{post:slug}', [CsvController::class, 'sukien.show'])
+Route::get('/sukien/{category:slug}/{post:slug}', [CsvController::class, 'sukien_show'])
     ->name('sukien.show');
 
 //post
