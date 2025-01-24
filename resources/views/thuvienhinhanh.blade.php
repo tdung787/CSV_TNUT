@@ -310,126 +310,27 @@
         <div class="container-lg mb-5">
             <div class="minTl mt-4">Hình ảnh</div>
             <div class="row g-4" id="listNews">
+                @foreach ($posts as $post)
                 <div class="col-md-3 col-sm-6">
                     <div class="inner">
-                        <div><a href="https://tnut.edu.vn/thong-bao-to-chuc-ngay-hoi-viec-lam-tnut-2023-dz11809.html"
-                                title="Ngày hội việc làm TNUT 2023"><img src="https://www.tnut.edu.vn/uploads/art/imgs/thumb/art_832_556_11827.jpg" width="100%"
-                                    class="rounded" alt="Ngày hội việc làm TNUT 2023"></a></div>
+                        @php
+                        $image = $post->images->first(); // Lấy ảnh đầu tiên của sản phẩm (nếu có nhiều ảnh)
+                        @endphp
+                        <div><a href="{{ route('hoicodiencactinh.show', ['category' => $categories->firstWhere('id', $post->category_id)->slug, 'post' => $post->slug]) }}"
+                                title="{{$post -> title}}"><img src="{{ asset('storage/' . ($image ? $image->file_path : 'default-image.jpg')) }}" width="100%"
+                                    class="rounded" alt="{{$post -> title}}"></a></div>
                         <div class="text rounded-bottom mt-3">
-                            <h2><a href="https://tnut.edu.vn/thong-bao-to-chuc-ngay-hoi-viec-lam-tnut-2023-dz11809.html"
-                                    title="Ngày hội việc làm TNUT 2023">Ngày hội việc làm TNUT 2023</a></h2>
-                            <div class="small text-secondary">20/04/2023</div>
+                            <h2><a href="{{ route('hoicodiencactinh.show', ['category' => $categories->firstWhere('id', $post->category_id)->slug, 'post' => $post->slug]) }}"
+                                    title="{{$post -> title}}">{{$post -> title}}</a></h2>
+                            <div class="small text-secondary">{{ $post->published_at->format('d/m/Y') }}</div>
                             <div></div>
-                            <div><a href="https://tnut.edu.vn/thong-bao-to-chuc-ngay-hoi-viec-lam-tnut-2023-dz11809.html"
+                            <div><a href="{{ route('hoicodiencactinh.show', ['category' => $categories->firstWhere('id', $post->category_id)->slug, 'post' => $post->slug]) }}"
                                     class="btn btn-sm text-danger btn-readmore">Chi tiết</a></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="inner">
-                        <div><a href="# "
-                                title="Giấy chứng nhận kiểm định chất lượng cơ sở giáo dục và chương trình đào tạo"><img
-                                    src="https://www.tnut.edu.vn/uploads/art/imgs/thumb/art_832_556_11812.jpg" width="100%" class="rounded"
-                                    alt="Giấy chứng nhận kiểm định chất lượng cơ sở giáo dục và chương trình đào tạo"></a>
-                        </div>
-                        <div class="text rounded-bottom mt-3">
-                            <h2><a href="#"
-                                    title="Giấy chứng nhận kiểm định chất lượng cơ sở giáo dục và chương trình đào tạo">Giấy
-                                    chứng nhận kiểm định chất lượng cơ sở giáo dục và chương trình đào tạo</a></h2>
-                            <div class="small text-secondary">10/04/2023</div>
-                            <div></div>
-                            <div><a href="#" class="btn btn-sm text-danger btn-readmore">Chi
-                                    tiết</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="inner">
-                        <div><a href="https://tnut.edu.vn/khao-sat-so-bo-danh-gia-chat-luong-chuong-trinh-dao-tao-chinh-quy-trinh-do-dai-hoc-dz9575.html"
-                                title="Khảo sát sơ bộ đánh giá chất lượng chương trình đào tạo chính quy trình độ đại học"><img
-                                    src="https://www.tnut.edu.vn/uploads/art/imgs/thumb/art_832_556_9575.jpg" width="100%" class="rounded"
-                                    alt="Khảo sát sơ bộ đánh giá chất lượng chương trình đào tạo chính quy trình độ đại học"></a>
-                        </div>
-                        <div class="text rounded-bottom mt-3">
-                            <h2><a href="https://tnut.edu.vn/khao-sat-so-bo-danh-gia-chat-luong-chuong-trinh-dao-tao-chinh-quy-trinh-do-dai-hoc-dz9575.html"
-                                    title="Khảo sát sơ bộ đánh giá chất lượng chương trình đào tạo chính quy trình độ đại học">Khảo
-                                    sát sơ bộ đánh giá chất lượng chương trình đào tạo chính quy trình độ đại học</a>
-                            </h2>
-                            <div class="small text-secondary">08/12/2022</div>
-                            <div></div>
-                            <div><a href="https://tnut.edu.vn/khao-sat-so-bo-danh-gia-chat-luong-chuong-trinh-dao-tao-chinh-quy-trinh-do-dai-hoc-dz9575.html"
-                                    class="btn btn-sm text-danger btn-readmore">Chi tiết</a></div>
-                        </div>
-                    </div>
-                </div>
-                {{-- <div class="col-md-3 col-sm-6">
-                        <div class="inner">
-                            <div><a href="/le-ky-niem-50-nam-ngay-thanh-lap-khoa-co-khi-va-khoa-dien-dz2658.html" title="Lễ kỷ niệm 50 năm ngày thành lập khoa Cơ khí và khoa Điện"><img src="img/thuvienhinhanh/4.jpg" width="100%" class="rounded" alt="Lễ kỷ niệm 50 năm ngày thành lập khoa Cơ khí và khoa Điện"></a></div>
-                            <div class="text rounded-bottom mt-3">
-                                <h2><a href="/le-ky-niem-50-nam-ngay-thanh-lap-khoa-co-khi-va-khoa-dien-dz2658.html" title="Lễ kỷ niệm 50 năm ngày thành lập khoa Cơ khí và khoa Điện">Lễ kỷ niệm 50 năm ngày thành lập khoa Cơ khí và khoa Điện</a></h2>
-                                <div class="small text-secondary">06/12/2022</div>
-                                <div></div>
-                                <div><a href="/le-ky-niem-50-nam-ngay-thanh-lap-khoa-co-khi-va-khoa-dien-dz2658.html" class="btn btn-sm text-danger btn-readmore">Chi tiết</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="inner">
-                            <div><a href="/thu-vien-truong-dz2608.html" title="Thư viện trường"><img src="img/thuvienhinhanh/5.jpg" width="100%" class="rounded" alt="Thư viện trường"></a></div>
-                            <div class="text rounded-bottom mt-3">
-                                <h2><a href="/thu-vien-truong-dz2608.html" title="Thư viện trường">Thư viện trường</a></h2>
-                                <div class="small text-secondary">03/12/2022</div>
-                                <div></div>
-                                <div><a href="/thu-vien-truong-dz2608.html" class="btn btn-sm text-danger btn-readmore">Chi tiết</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="inner">
-                            <div><a href="/hoat-dong-sinh-vien-tnut-dz1018.html" title="Hoạt động sinh viên TNUT"><img src="img/thuvienhinhanh/6.jpg" width="100%" class="rounded" alt="Hoạt động sinh viên TNUT"></a></div>
-                            <div class="text rounded-bottom mt-3">
-                                <h2><a href="/hoat-dong-sinh-vien-tnut-dz1018.html" title="Hoạt động sinh viên TNUT">Hoạt động sinh viên TNUT</a></h2>
-                                <div class="small text-secondary">23/11/2022</div>
-                                <div></div>
-                                <div><a href="/hoat-dong-sinh-vien-tnut-dz1018.html" class="btn btn-sm text-danger btn-readmore">Chi tiết</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="inner">
-                            <div><a href="/su-kien-tnut-dz1021.html" title="Sự kiện TNUT"><img src="img/thuvienhinhanh/7.jpg" width="100%" class="rounded" alt="Sự kiện TNUT"></a></div>
-                            <div class="text rounded-bottom mt-3">
-                                <h2><a href="/su-kien-tnut-dz1021.html" title="Sự kiện TNUT">Sự kiện TNUT</a></h2>
-                                <div class="small text-secondary">23/11/2022</div>
-                                <div></div>
-                                <div><a href="/su-kien-tnut-dz1021.html" class="btn btn-sm text-danger btn-readmore">Chi tiết</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="inner">
-                            <div><a href="/khuon-vien-truong-tnut-dz1020.html" title="Khuôn viên trường TNUT"><img src="img/thuvienhinhanh/8.jpg" width="100%" class="rounded" alt="Khuôn viên trường TNUT"></a></div>
-                            <div class="text rounded-bottom mt-3">
-                                <h2><a href="/khuon-vien-truong-tnut-dz1020.html" title="Khuôn viên trường TNUT">Khuôn viên trường TNUT</a></h2>
-                                <div class="small text-secondary">23/11/2022</div>
-                                <div></div>
-                                <div><a href="/khuon-vien-truong-tnut-dz1020.html" class="btn btn-sm text-danger btn-readmore">Chi tiết</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="inner">
-                            <div><a href="/sinh-vien-hoc-tap-tai-tnut-dz1017.html" title="Sinh viên học tập tại TNUT"><img src="img/thuvienhinhanh/9.jpg" width="100%" class="rounded" alt="Sinh viên học tập tại TNUT"></a></div>
-                            <div class="text rounded-bottom mt-3">
-                                <h2><a href="/sinh-vien-hoc-tap-tai-tnut-dz1017.html" title="Sinh viên học tập tại TNUT">Sinh viên học tập tại TNUT</a></h2>
-                                <div class="small text-secondary">23/11/2022</div>
-                                <div></div>
-                                <div><a href="/sinh-vien-hoc-tap-tai-tnut-dz1017.html" class="btn btn-sm text-danger btn-readmore">Chi tiết</a></div>
-                            </div>
-                        </div>
-                    </div>
-        </div> --}}
-                {{-- <ul class="pagination justify-content-center pagecs"><li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li><li class="active"><a href="#">1</a></li><li class="disabled"><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li></ul> --}}
+                @endforeach
+                {{ $posts->withQueryString()->links() }}
             </div>
         </div>
     </main>

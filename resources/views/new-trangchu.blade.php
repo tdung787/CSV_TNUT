@@ -428,145 +428,66 @@
                     <div class="mb-3 hotNews">
                         <div>
                             <div class="hover02">
-                                <a href="#"><img
-                                        src="https://www.tnut.edu.vn/uploads/art/imgs/thumb/art_832_556_15126.jpg"
+                                @php
+                                $image = $latestPost->images->first(); // Lấy ảnh đầu tiên của sản phẩm (nếu có nhiều ảnh)
+                                @endphp
+                                <a href="{{ route('hoicodiencactinh.show', ['category' => $categories->firstWhere('id', $latestPost->category_id)->slug, 'post' => $latestPost->slug]) }}"><img
+                                        src="{{ asset('storage/' . ($image ? $image->file_path : 'default-image.jpg')) }}"
                                         width="100%"
-                                        alt="02 SINH VIÊN TNUT ĐẠT GIẢI BA OLYMPIC TOÁN HỌC TOÀN QUỐC MÔN GIẢI TÍCH NĂM 2024" /></a>
+                                        alt="{{$latestPost -> title}}" /></a>
                             </div>
                             <div class="p-3 m-0 h4 fw-bold">
                                 <h2>
-                                    <a href="#"
-                                        title="02 SINH VIÊN TNUT ĐẠT GIẢI BA OLYMPIC TOÁN HỌC TOÀN QUỐC MÔN GIẢI TÍCH NĂM 2024">02
-                                        SINH VIÊN TNUT ĐẠT GIẢI BA OLYMPIC TOÁN HỌC TOÀN QUỐC
-                                        MÔN GIẢI TÍCH NĂM 2024</a>
+                                    <a href="{{ route('hoicodiencactinh.show', ['category' => $categories->firstWhere('id', $latestPost->category_id)->slug, 'post' => $latestPost->slug]) }}"
+                                        title="{{$latestPost -> title}}">
+                                        {{$latestPost -> title}}</a>
                                 </h2>
                             </div>
                         </div>
                     </div>
                     <div class="row g-3">
+                        @foreach ($nextPosts as $post)
                         <div class="col-md-6 col-sm-6 col-6 d-none-mobile">
                             <div>
                                 <div class="mb-2 hover02">
-                                    <a href="#" class="h-even"
-                                        title="Buổi làm việc với trường Jeonju ngày 18.4">
-                                        <img src="https://www.tnut.edu.vn/uploads/art/imgs/thumb/art_832_556_15124.jpg"
-                                            width="100%" alt="Buổi làm việc với trường Jeonju ngày 18.4" />
+                                    <a href="{{ route('hoicodiencactinh.show', ['category' => $categories->firstWhere('id', $post->category_id)->slug, 'post' => $post->slug]) }}" class="h-even"
+                                        title="{{$post -> title}}">
+                                        @php
+                                        $image = $post->images->first(); // Lấy ảnh đầu tiên của sản phẩm (nếu có nhiều ảnh)
+                                        @endphp
+                                        <img src="{{ asset('storage/' . ($image ? $image->file_path : 'default-image.jpg')) }}"
+                                            width="100%" alt="{{$post -> title}}" />
                                     </a>
                                 </div>
                                 <div class="honew2">
                                     <div class="cattego">
-                                        <span class="catname" title="Hợp tác giáo dục"><a href="#">Hợp tác giáo
-                                                dục</a></span><span> 20/04/2024</span>
+                                        <span class="catname" title="{{$post->category->title}}"><a href="{{route('hoicodiencactinh')}}">{{$post->category->title}}</a></span><span> {{ $post->published_at->format('d/m/Y') }}</span>
                                     </div>
                                     <h2 class="fnomal">
-                                        <a href="#" class="text-dark"
-                                            title="Buổi làm việc với trường Jeonju ngày 18.4">Buổi làm việc với trường
-                                            Jeonju ngày 18/04</a>
+                                        <a href="{{ route('hoicodiencactinh.show', ['category' => $categories->firstWhere('id', $post->category_id)->slug, 'post' => $post->slug]) }}" class="text-dark"
+                                            title="{{$post -> title}}">{{$post -> title}}</a>
                                     </h2>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-6 col-6 d-none-mobile">
-                            <div>
-                                <div class="mb-2 hover02">
-                                    <a href="#" class="h-even"
-                                        title="Trường Đại học Khoa học Và Kỹ thuật Quốc lập Cần Ích, Đài Loan đến thăm và làm việc với Trường Đại Học Kỹ Thuật Công Nghiệp">
-                                        <img src="https://www.tnut.edu.vn/uploads/art/imgs/thumb/art_832_556_15137.jpg"
-                                            width="100%"
-                                            alt="Trường Đại học Khoa học Và Kỹ thuật Quốc lập Cần Ích, Đài Loan đến thăm và làm việc với Trường Đại Học Kỹ Thuật Công Nghiệp" />
-                                    </a>
-                                </div>
-                                <div class="honew2">
-                                    <div class="cattego">
-                                        <span class="catname" title="Hợp tác giáo dục"><a href="#">Hợp tác giáo
-                                                dục</a></span><span> 17/04/2024</span>
-                                    </div>
-                                    <h2 class="fnomal">
-                                        <a href="#" class="text-dark"
-                                            title="Trường Đại học Khoa học Và Kỹ thuật Quốc lập Cần Ích, Đài Loan đến thăm và làm việc với Trường Đại Học Kỹ Thuật Công Nghiệp">Trường
-                                            Đại học Khoa học Và Kỹ thuật Quốc lập Cần Ích,
-                                            Đài Loan đến thăm và làm việc v...</a>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-5 col-sm-5 g-1 d-none-mobile table1" style="margin-top:0 ">
                     <div id="newstop-highlight-list1" class="nano has-scrollbar">
                         <div class="nano-content" tabindex="0" style="right: -17px">
                             <ul class="list-group list-group-flush list-group-dot " style="list-style-type: none;">
+                                @foreach ($additionalPosts as $post)
                                 <li class="list-group-item honew2">
                                     <h3>
-                                        <a href="#" class="text-dark"
-                                            title="Bế mạc Đánh giá Chương trình đào tạo tiên tiến các ngành Kỹ thuật cơ khí; Kỹ thuật điện theo tiêu chuẩn AUN – QA">Bế
-                                            mạc Đánh giá Chương trình đào tạo tiên tiến các
-                                            ngành Kỹ thuật cơ khí; Kỹ thuật điện theo tiêu chuẩn AUN
-                                            – QA
+                                        <a href="{{ route('hoicodiencactinh.show', ['category' => $categories->firstWhere('id', $post->category_id)->slug, 'post' => $post->slug]) }}" class="text-dark"
+                                            title="{{$post -> title}}">{{$post -> title}}
                                         </a>
                                     </h3>
                                 </li>
-                                <li class="list-group-item honew2">
-
-                                    <h3>
-                                        <a href="#" class="text-dark"
-                                            title="Khai mạc đánh giá 02 chương trình đào tạo tiên tiến ngành Kỹ thuật cơ khí và Kỹ thuật điện theo tiêu chuẩn AUN – QA (09-11/4/2024)">Khai
-                                            mạc đánh giá 02 chương trình đào tạo tiên tiến
-                                            ngành Kỹ thuật cơ khí và Kỹ thuật điện theo tiêu chuẩn
-                                            AUN – QA (09-11/4/2024)
-                                        </a>
-                                    </h3>
-                                </li>
-                                <li class="list-group-item honew2">
-                                    <h3>
-                                        <a href="#" class="text-dark"
-                                            title="Trường Đại học Kỹ thuật Công nghiệp tổ chức chương trình ngày hội tiếng Anh - English festival 2024 tại THPT Chu Văn An - Thái Nguyên">Trường
-                                            Đại học Kỹ thuật Công nghiệp tổ chức chương
-                                            trình ngày hội tiếng Anh - English festival 2024 tại
-                                            THPT Chu Văn An - Thái Nguyên
-                                        </a>
-                                    </h3>
-                                </li>
-                                <li class="list-group-item honew2">
-                                    <h3>
-                                        <a href="#" class="text-dark"
-                                            title="Cán bộ Giảng viên, Sinh viên Trường Đại học Kỹ thuật Công nghiệp tham gia Chương trình Trao đổi học tập và Nghiên cứu tại Đại học Hoàng Cương – Hồ Bắc, Trung Quốc">Cán
-                                            bộ Giảng viên, Sinh viên Trường Đại học Kỹ thuật
-                                            Công nghiệp tham gia Chương trình Trao đổi học tập và
-                                            Nghiên cứu tại Đại học Hoàng Cương – Hồ Bắc, Trung Quốc
-                                        </a>
-                                    </h3>
-                                </li>
-                                <li class="list-group-item honew2">
-                                    <h3>
-                                        <a href="#" class="text-dark"
-                                            title="Hội nghị Kiện toàn Nhân sự Ban Chấp hành Đoàn Trường Đại học Kỹ thuật Công nghiệp Nhiệm kỳ 2022 – 2024">Hội
-                                            nghị Kiện toàn Nhân sự Ban Chấp hành Đoàn Trường
-                                            Đại học Kỹ thuật Công nghiệp Nhiệm kỳ 2022 – 2024
-                                        </a>
-                                    </h3>
-                                </li>
-                                <li class="list-group-item honew2">
-                                    <h3>
-                                        <a href="#" class="text-dark"
-                                            title="Trường Đại học Kỹ thuật Công nghiệp tổ chức Xét nghiệm Tầm soát Ung thư Miễn phí cho viên chức, người lao động Nhà trường">Trường
-                                            Đại học Kỹ thuật Công nghiệp tổ chức Xét nghiệm
-                                            Tầm soát Ung thư Miễn phí cho viên chức, người lao động
-                                            Nhà trường
-                                        </a>
-                                    </h3>
-                                </li>
-                                <li class="list-group-item honew2">
-                                    <h3>
-                                        <a href="#" class="text-dark"
-                                            title="Trường Đại học Kỹ thuật Công nghiệp làm việc với Công ty cổ phần Kỹ thuật MEP">Trường
-                                            Đại học Kỹ thuật Công nghiệp làm việc với Công
-                                            ty cổ phần Kỹ thuật MEP
-                                        </a>
-                                    </h3>
-                                </li>
+                                @endforeach
                                 <li class=" honew2" style="padding-left:16px;">
-                                    <a class="h-link" href="#" ">Xem thêm...</a>
+                                    <a class="h-link" href="{{route('hoicodiencactinh')}}">Xem thêm...</a>
                                 </li>
                             </ul>
                         </div>
@@ -590,7 +511,7 @@
                                         <a href="{{ route('hoicodiencactinh') }}">Hội cơ điện các tỉnh</a>
                                     </li>
                                     <li class="list-group-item c5">
-                                        <a href="/blog/hop-tac-11030000">Tham gia CLB kết nối</a>
+                                        <a href="#">Tham gia CLB kết nối</a>
                                     </li>
                                 </ul>
                             </div>
@@ -646,18 +567,13 @@
                                     NỐI HỘI CƠ ĐIỆN CÁC TỈNH
                                 </div>
                                 <ul id="hover-item" class="list-group list-group-flush">
+                                    @foreach ($hoicodien as $post)
                                     <li class="list-group-item c5">
-                                        <a href="{{ route('quyphattrien') }}">Hội Cơ điện tỉnh Hoà Bình
+                                        <a href="{{ route('quyphattrien') }}">{{$post -> title}}
                                         </a>
 
                                     </li>
-                                    <li class="list-group-item c5">
-                                        <a href="{{ route('quytuhao') }}">Hội Cơ điện tỉnh Thái
-                                            Nguyên</a>
-                                    </li>
-                                    <li class="list-group-item c5">
-                                        <a href="{{ route('dangkydonggop') }}">Hội Cơ điện tỉnh Hải Phòng</a>
-                                    </li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
@@ -665,24 +581,6 @@
                                 src="https://www.tnut.edu.vn/uploads/art/imgs/thumb/art_832_556_2569.jpg"
                                 width="100%" height="220px" alt="Kỹ sư kỹ thuật"></div>
                     </div>
-                    {{-- <div class="mb-3 border widget p-3 bg-light rounded">
-                        <div class="minTl">THÔNG TIN KẾT NỐI HỘI CƠ ĐIỆN CÁC TỈNH</div>
-                        <ul id="font-right" class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                <a href="{{ route('hoabinh') }}" class=" text-dark nomals1">Hội Cơ điện tỉnh Hoà Bình
-                                </a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="/blog/khoa-hoc-11020000" class=" text-dark nomals1">Hội Cơ điện tỉnh Thái
-                                    Nguyên
-                                </a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="/blog/hop-tac-11030000" class=" text-dark nomals1">Hội Cơ điện tỉnh Hải Phòng
-                                </a>
-                            </li>
-                        </ul>
-                    </div> --}}
                     <div class="mb-3">
                         <div id="rnbnright1"></div>
                     </div>

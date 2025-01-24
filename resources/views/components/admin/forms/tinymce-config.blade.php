@@ -76,6 +76,8 @@
 
                     input.click();
                 },
+                width: 1000,
+                height: 800, 
             });
         });
     </script>

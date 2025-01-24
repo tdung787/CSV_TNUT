@@ -3,8 +3,6 @@
 
         <div class="d-flex align-items-center justify-content-between">
             <a class="logo d-flex align-items-center">
-                <img src="{{ asset('website/images/logo_htx_rm_bg.png') }}" style="max-height: 55px !important;"
-                    alt="">
                 <span class="d-none d-lg-block" style="font-size: 20px">CSV TNUT</span>
             </a>
             <i class="fal fa-bars toggle-sidebar-btn"></i>

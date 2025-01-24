@@ -15,7 +15,38 @@ class CsvController extends Controller
 {
     public function index()
     {
-        return view('new-trangchu');
+        $latestPost = Post::whereHas('category', function ($query) {
+            $query->where('title', 'Hội cơ điện các tỉnh');
+        })->latest('published_at')->first();
+
+        // Lấy 2 bài viết kế tiếp sau bài viết mới nhất
+        $nextPosts = Post::whereHas('category', function ($query) {
+            $query->where('title', 'Hội cơ điện các tỉnh');
+        })
+            ->where('id', '!=', $latestPost->id) // Loại bỏ bài viết mới nhất
+            ->latest('published_at')
+            ->take(2) // Lấy 2 bài viết
+            ->get();
+
+        $hoicodien = Post::whereHas('category', function ($query) {
+            $query->where('title', 'Hội cơ điện các tỉnh');
+        })
+            ->latest('published_at')
+            ->take(3) // Lấy 2 bài viết
+            ->get();
+
+        $excludedIds = collect([$latestPost->id])->merge($nextPosts->pluck('id'))->all(); // Tập hợp các ID cần loại trừ
+        $additionalPosts = Post::whereHas('category', function ($query) {
+            $query->where('title', 'Hội cơ điện các tỉnh');
+        })
+            ->whereNotIn('id', $excludedIds) // Loại trừ $latestPost và $nextPosts
+            ->latest('published_at')
+            ->take(8) // Lấy 8 bài viết
+            ->get();
+
+        $categories = PostCategory::all();
+
+        return view('new-trangchu', compact('latestPost', 'nextPosts', 'additionalPosts', 'categories', 'hoicodien'));
     }
     public function sumenh()
     {
@@ -124,7 +155,13 @@ class CsvController extends Controller
     }
     public function thuvienhinhanh()
     {
-        return view('thuvienhinhanh');
+        $posts = Post::whereHas('category', function ($query) {
+            $query->where('title', 'Hội cơ điện các tỉnh');
+        })->latest('published_at')->paginate(12);
+
+        $categories = PostCategory::all();
+
+        return view('thuvienhinhanh', compact('posts', 'categories'));
     }
     public function dieule()
     {
