@@ -13,5 +13,8 @@
         <li class="list-group-item">
             <a href="{{route('tieubieu')}}" class="text-dark">Gương mặt cựu sinh viên tiêu biểu</a>
         </li>
+        <li class="list-group-item">
+            <a href="{{route('thuvienhinhanh')}}" class="text-dark">Thư viện hình ảnh</a>
+        </li>
     </ul>
 </div>

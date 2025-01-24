@@ -17,9 +17,8 @@
             <a href="{{route('tieubieu')}}" class="fw-bold text-dark nomals1">Gương mặt cựu sinh viên tiêu biểu
             </a>
         </li>
-        {{-- <li class="list-group-item bg-light rounded">
-            <a href="{{route('thuvienhinhanh')}}" class="fw-bold text-dark nomals1">Thư viện hình ảnh
-            </a>
-        </li> --}}
+        <li class="list-group-item bg-light rounded">
+            <a href="{{route('thuvienhinhanh')}}" class="text-dark">Thư viện hình ảnh</a>
+        </li>
     </ul>
 </div>

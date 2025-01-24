@@ -126,17 +126,8 @@
         <div class="row">
             <div class="col-md-8 col-sm-12">
                 <div class="post"></div>
-                <div class="title">{{$post->category->title}}</div>
-                <b style="font-size: larger">{{ $post->title }}</b>
-
-                {{-- <div class="text-justify" style="line-height:23px" id="Art_Pdesc">
-                    <p style="text-align: center;"><iframe title="YouTube video player"
-                            src="//www.youtube.com/embed/d-koRBO0ASw" width="560" height="315" frameborder="0"
-                            allowfullscreen="allowfullscreen"></iframe></p>
-                    <p style="text-align: center;"><iframe title="YouTube video player"
-                            src="//www.youtube.com/embed/QOk4cFAccm0" width="560" height="315" frameborder="0"
-                            allowfullscreen="allowfullscreen"></iframe></p>
-                </div> --}}
+                <div class="title mb-3">{{$post->category->title}}</div>
+                <h4 class="fw-bold tits">{{ $post->title }}</h4>
                 <div class="entry-content text-justify rte article__content js-toc-content">
                     {!! $post->content !!}
                 </div>
@@ -144,6 +135,7 @@
 
             </div>
             <div class="col-md-4 col-sm-12">
+                <div class="post"></div>
                 @include('layout.postsidebar')
             </div>
         </div>
