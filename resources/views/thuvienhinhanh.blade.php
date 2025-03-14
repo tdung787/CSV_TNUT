@@ -17,7 +17,7 @@
     <!-- SimpleLightbox plugin CSS-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        
+
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link rel="stylesheet" href="{{ asset('css/dropdown.css') }}" />
@@ -316,15 +316,15 @@
                         @php
                         $image = $post->images->first(); // Lấy ảnh đầu tiên của sản phẩm (nếu có nhiều ảnh)
                         @endphp
-                        <div><a href="{{ route('hoicodiencactinh.show', ['category' => $categories->firstWhere('id', $post->category_id)->slug, 'post' => $post->slug]) }}"
+                        <div><a href="{{ route('thuvienhinhanh.show', ['category' => $categories->firstWhere('id', $post->category_id)->slug, 'post' => $post->slug]) }}"
                                 title="{{$post -> title}}"><img src="{{ asset('storage/' . ($image ? $image->file_path : 'default-image.jpg')) }}" width="100%"
                                     class="rounded" alt="{{$post -> title}}"></a></div>
                         <div class="text rounded-bottom mt-3">
-                            <h2><a href="{{ route('hoicodiencactinh.show', ['category' => $categories->firstWhere('id', $post->category_id)->slug, 'post' => $post->slug]) }}"
+                            <h2><a href="{{ route('thuvienhinhanh.show', ['category' => $categories->firstWhere('id', $post->category_id)->slug, 'post' => $post->slug]) }}"
                                     title="{{$post -> title}}">{{$post -> title}}</a></h2>
                             <div class="small text-secondary">{{ $post->published_at->format('d/m/Y') }}</div>
                             <div></div>
-                            <div><a href="{{ route('hoicodiencactinh.show', ['category' => $categories->firstWhere('id', $post->category_id)->slug, 'post' => $post->slug]) }}"
+                            <div><a href="{{ route('thuvienhinhanh.show', ['category' => $categories->firstWhere('id', $post->category_id)->slug, 'post' => $post->slug]) }}"
                                     class="btn btn-sm text-danger btn-readmore">Chi tiết</a></div>
                         </div>
                     </div>
@@ -339,12 +339,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
     <script src="{{ asset('js/scripts_old.js') }}"></script>
-    
+
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="{{ asset('slick/slick.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"  crossorigin="anonymous"></script>
 
 </script>

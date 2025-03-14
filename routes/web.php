@@ -35,30 +35,33 @@ Route::get('/dangbai', [CsvController::class, 'dangbai'])->name('dangbai');
 
 Route::get('/banchaphanh', [CsvController::class, 'banchaphanh'])->name('banchaphanh');
 
-Route::get('/thuvienhinhanh', [CsvController::class, 'thuvienhinhanh'])->name('thuvienhinhanh');
 
 //post
 
 Route::get('/hoicodiencactinh', [CsvController::class, 'hoicodiencactinh'])->name('hoicodiencactinh');
 
 Route::get('/hoicodiencactinh/{category:slug}/{post:slug}', [CsvController::class, 'hoicodiencactinh_show'])
-    ->name('hoicodiencactinh.show');
+->name('hoicodiencactinh.show');
 
 Route::get('/tinhnguoicodien', [CsvController::class, 'tinhnguoicodien'])->name('tinhnguoicodien');
 
 Route::get('/tinhnguoicodien/{category:slug}/{post:slug}', [CsvController::class, 'tinhnguoicodien_show'])
-    ->name('tinhnguoicodien.show');
+->name('tinhnguoicodien.show');
 
 Route::get('/tieubieu', [CsvController::class, 'tieubieu'])->name('tieubieu');
 
 Route::get('/tieubieu/{category:slug}/{post:slug}', [CsvController::class, 'tieubieu_show'])
-    ->name('tieubieu.show');
+->name('tieubieu.show');
 
 Route::get('/sukien', [CsvController::class, 'sukien'])->name('sukien');
 
 Route::get('/sukien/{category:slug}/{post:slug}', [CsvController::class, 'sukien_show'])
-    ->name('sukien.show');
+->name('sukien.show');
 
+Route::get('/thuvienhinhanh', [CsvController::class, 'thuvienhinhanh'])->name('thuvienhinhanh');
+
+Route::get('/thuvienhinhanh/{category:slug}/{post:slug}', [CsvController::class, 'thuvienhinhanh_show'])
+->name('thuvienhinhanh.show');
 //post
 
 Route::get('/sumenh', [CsvController::class, 'sumenh'])->name('sumenh');
