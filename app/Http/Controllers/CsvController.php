@@ -16,12 +16,12 @@ class CsvController extends Controller
     public function index()
     {
         $latestPost = Post::whereHas('category', function ($query) {
-            $query->where('title', 'Hội cơ điện các tỉnh');
+            $query->where('title', 'Tình người cơ điện');
         })->latest('published_at')->first();
 
         // Lấy 2 bài viết kế tiếp sau bài viết mới nhất
         $nextPosts = Post::whereHas('category', function ($query) {
-            $query->where('title', 'Hội cơ điện các tỉnh');
+            $query->where('title', 'Tình người cơ điện');
         })
             ->where('id', '!=', $latestPost->id) // Loại bỏ bài viết mới nhất
             ->latest('published_at')
@@ -37,7 +37,7 @@ class CsvController extends Controller
 
         $excludedIds = collect([$latestPost->id])->merge($nextPosts->pluck('id'))->all(); // Tập hợp các ID cần loại trừ
         $additionalPosts = Post::whereHas('category', function ($query) {
-            $query->where('title', 'Hội cơ điện các tỉnh');
+            $query->where('title', 'Tình người cơ điện');
         })
             ->whereNotIn('id', $excludedIds) // Loại trừ $latestPost và $nextPosts
             ->latest('published_at')
@@ -156,12 +156,24 @@ class CsvController extends Controller
     public function thuvienhinhanh()
     {
         $posts = Post::whereHas('category', function ($query) {
-            $query->where('title', 'Hội cơ điện các tỉnh');
+            $query->where('title', 'Thư viện hình ảnh');
         })->latest('published_at')->paginate(12);
 
         $categories = PostCategory::all();
 
         return view('thuvienhinhanh', compact('posts', 'categories'));
+    }
+    public function thuvienhinhanh_show(PostCategory $category, Post $post)
+    {
+        // Đảm bảo sản phẩm thuộc danh mục
+        if ($post->category_id !== $category->id) {
+            abort(404);
+        }
+
+        return view('bantin.show', [
+            'post' => $post,
+            'category' => $category,
+        ]);
     }
     public function dieule()
     {

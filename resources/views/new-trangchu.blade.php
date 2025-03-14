@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
 
-        
+
     <!-- Core theme CSS (includes Bootstrap)-->
     <link rel="stylesheet" type="text/css" href="{{ asset('slick/slick.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('slick/slick-theme.css') }}" />
@@ -431,14 +431,14 @@
                                 @php
                                 $image = $latestPost->images->first(); // Lấy ảnh đầu tiên của sản phẩm (nếu có nhiều ảnh)
                                 @endphp
-                                <a href="{{ route('hoicodiencactinh.show', ['category' => $categories->firstWhere('id', $latestPost->category_id)->slug, 'post' => $latestPost->slug]) }}"><img
+                                <a href="{{ route('tinhnguoicodien.show', ['category' => $categories->firstWhere('id', $latestPost->category_id)->slug, 'post' => $latestPost->slug]) }}"><img
                                         src="{{ asset('storage/' . ($image ? $image->file_path : 'default-image.jpg')) }}"
                                         width="100%"
                                         alt="{{$latestPost -> title}}" /></a>
                             </div>
                             <div class="p-3 m-0 h4 fw-bold">
                                 <h2>
-                                    <a href="{{ route('hoicodiencactinh.show', ['category' => $categories->firstWhere('id', $latestPost->category_id)->slug, 'post' => $latestPost->slug]) }}"
+                                    <a href="{{ route('tinhnguoicodien.show', ['category' => $categories->firstWhere('id', $latestPost->category_id)->slug, 'post' => $latestPost->slug]) }}"
                                         title="{{$latestPost -> title}}">
                                         {{$latestPost -> title}}</a>
                                 </h2>
@@ -450,7 +450,7 @@
                         <div class="col-md-6 col-sm-6 col-6 d-none-mobile">
                             <div>
                                 <div class="mb-2 hover02">
-                                    <a href="{{ route('hoicodiencactinh.show', ['category' => $categories->firstWhere('id', $post->category_id)->slug, 'post' => $post->slug]) }}" class="h-even"
+                                    <a href="{{ route('tinhnguoicodien.show', ['category' => $categories->firstWhere('id', $post->category_id)->slug, 'post' => $post->slug]) }}" class="h-even"
                                         title="{{$post -> title}}">
                                         @php
                                         $image = $post->images->first(); // Lấy ảnh đầu tiên của sản phẩm (nếu có nhiều ảnh)
@@ -461,10 +461,10 @@
                                 </div>
                                 <div class="honew2">
                                     <div class="cattego">
-                                        <span class="catname" title="{{$post->category->title}}"><a href="{{route('hoicodiencactinh')}}">{{$post->category->title}}</a></span><span> {{ $post->published_at->format('d/m/Y') }}</span>
+                                        <span class="catname" title="{{$post->category->title}}"><a href="{{route('tinhnguoicodien')}}">{{$post->category->title}}</a></span><span> {{ $post->published_at->format('d/m/Y') }}</span>
                                     </div>
                                     <h2 class="fnomal">
-                                        <a href="{{ route('hoicodiencactinh.show', ['category' => $categories->firstWhere('id', $post->category_id)->slug, 'post' => $post->slug]) }}" class="text-dark"
+                                        <a href="{{ route('tinhnguoicodien.show', ['category' => $categories->firstWhere('id', $post->category_id)->slug, 'post' => $post->slug]) }}" class="text-dark"
                                             title="{{$post -> title}}">{{$post -> title}}</a>
                                     </h2>
                                 </div>
@@ -480,14 +480,14 @@
                                 @foreach ($additionalPosts as $post)
                                 <li class="list-group-item honew2">
                                     <h3>
-                                        <a href="{{ route('hoicodiencactinh.show', ['category' => $categories->firstWhere('id', $post->category_id)->slug, 'post' => $post->slug]) }}" class="text-dark"
+                                        <a href="{{ route('tinhnguoicodien.show', ['category' => $categories->firstWhere('id', $post->category_id)->slug, 'post' => $post->slug]) }}" class="text-dark"
                                             title="{{$post -> title}}">{{$post -> title}}
                                         </a>
                                     </h3>
                                 </li>
                                 @endforeach
                                 <li class=" honew2" style="padding-left:16px;">
-                                    <a class="h-link" href="{{route('hoicodiencactinh')}}">Xem thêm...</a>
+                                    <a class="h-link" href="{{route('tinhnguoicodien')}}">Xem thêm...</a>
                                 </li>
                             </ul>
                         </div>
@@ -763,7 +763,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
     <script src="{{ asset('js/scripts_old.js') }}"></script>
-    
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
          crossorigin="anonymous">
     </script>
